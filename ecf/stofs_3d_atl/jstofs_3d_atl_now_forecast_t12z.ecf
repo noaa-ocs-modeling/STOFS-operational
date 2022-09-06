@@ -3,9 +3,7 @@
 #PBS  -N stofs_3d_atl_nfcast_t12z
 #PBS  -A ESTOFS-DEV
 #PBS  -q dev
-##PBS -j oe
-#PBS  -o /lfs/h1/nos/estofs/noscrub/Zizang.Yang/dev.stofs.v1.1.0/reports/stofs_3d_atl
-#PBS  -e /lfs/h1/nos/estofs/noscrub/Zizang.Yang/dev.stofs.v1.1.0/reports/stofs_3d_atl
+#PBS -j oe
 #PBS  -S /bin/bash
 
 #PBS  -l walltime=4:00:00
