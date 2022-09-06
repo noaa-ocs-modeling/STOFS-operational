@@ -1,0 +1,59 @@
+
+######################### SCHISM Local Compiler and System Settings
+#
+#
+#   This file contains the local compiler settings and system choices such as MPI_VERSION
+#   It is meant to be used as a cache init file with the -C option. 
+
+#   For purposes of clarity and re-usability, the configuration examples have been separated into
+#   system locations and compilers (this file) and module/algorithm choices (e.g. USE_SED,TVD_LIM). 
+#   An example of the latter is given in SCHISM.build.build.sample
+
+#   I practice, these can be separate (for people who don't like repeating system settings) or 
+#   together. In the latter case, cmake works fine with two init files: cmake -C<init1> -C<init2>
+#####################################################################
+
+
+# Compiler choice and any unusual flags. 
+# Defaults for Intel, GFortran and PGI are provided in SCHISM.Compile.cmake, so technically you do not need to set them
+# if you have one of these.  However correct/optimal flags are often very specific to 
+# an HPC architecture. This is where you set this type of information
+
+#set(MPI_VERSION CACHE STRING 2 "Version of MPI Interface, which is the default usually 2 but pleiades is 1")
+#set(CMAKE_Fortran_FLAGS_RELEASE "-O2 -cpp -assume byterecl CACHE STRING "Fortran flags")
+#set(CPREPRO_FLAG -cpp CACHE STRING "Vendor-specific flag to force use of the C Preprocessor")
+#set(USE_OPEN64     CACHE BOOLEAN OFF )   #Might be needed if you are using this compiler
+set(MPI_VERSION    CACHE STRING  "2")
+
+
+
+##########################  LOCATIONS #########################################################
+#
+# LOCATIONS: Set locations for NetCDF (possibly HDF5 if NetCDF links to it), ParMetis, PETSc
+#            You don't need to set these if they are in your environment
+#
+#            Only the library home location is needed and the /lib or /bin part will be inferred.
+#            Generally traditional structure is assumed, but the Parmetis and GOTM libraries
+#            that are included have a slightly different structure
+#
+#            You only need PETSc for WWM
+#            You only need GOTM if you intend to use it with USE_GOTM
+#            GOTM and ParMetis local copies will be found automatically, but also can overridden
+#            You have to build them
+#
+
+# This cannot be set by hardwiring, the default pointing to the internal copy should be correct
+# set(PARMETIS_DIR  path/to/Parmetis CACHE PATH "Path to ParMetis")
+
+set(HDF5_DIR  /opt/hdf5/1.10.4-intel64 CACHE PATH "Path to HDF5")
+set(NETCDF_FORTRAN_DIR /opt/netcdf/netcdf-fortran/4.4.4-intel64 CACHE PATH "Path to NetCDF Fortran library")
+set(NETCDF_C_DIR  /opt/netcdf/netcdf-c/4.6.2-intel64 CACHE PATH "Path to NetCDF C library")
+
+set(HDF5_DIR /opt/hdf5/1.10.4-intel64 CACHE PATH "Path to HDF5")
+set(SZIP_DIR /opt/szip/2.1.1-intel64  CACHE PATH "Path to SZip compression library")
+#set(MPI_ROOT /opt/mvapich2/2.3-intel  CACHE PATH "Root dir of MPI implementation")
+
+# PETSC hasn't been maintained, not sure of status (Eli).
+#set(PETSC_DIR  /Calcul/Apps/PETSc/3.3-p4.intel/ PATH "Path to PETC, (if unset, defaults to pre-built local copy)")
+#set(GOTM_HOME  /home/eli/myscratch/gotm_v5.2 CACHE PATH "Path to GOTM")
+
