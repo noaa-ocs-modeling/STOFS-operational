@@ -81,7 +81,10 @@ export KEEPDATA="YES"
 DATA=
 export DATA=${DATA:-${DATAROOT}/run_$YMD_CURRENT_DATE}
 
+cd ${DATAROOT};
+ln -sf run_${YMD_CURRENT_DATE}  post.${pid}
 cd $DATA
+
 
 # pre-requisite for setpdy.sh: existed $DATA!
 setpdy.sh
