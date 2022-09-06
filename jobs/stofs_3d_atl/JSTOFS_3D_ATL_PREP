@@ -76,7 +76,7 @@ export PDY=${YMD_CURRENT_DATE}
 export KEEPDATA="YES"
 DATA=
 #export DATA=${DATA:-${DATAROOT}/prep_$YMD_CURRENT_DATE}
-export DATA=${DATA:-${DATAROOT}/prep_$YMD_CURRENT_DATE}.${pid}}
+export DATA=${DATA:-${DATAROOT}/prep_${YMD_CURRENT_DATE}.${pid}}
 mkdir -p $DATA; cd $DATA
 
 # pre-requisite for setpdy.sh: existed $DATA!
