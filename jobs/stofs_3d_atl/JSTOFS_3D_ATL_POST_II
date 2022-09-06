@@ -29,14 +29,13 @@ else
 
 fi
 
-
 # --------------------> Define process id info
 export job_name=jobs_post_processing
 
+export pid=$$
 export outid=${job_name}
 export jobid=${outid}.o${pid}
 export pgmout=OUTPUT.${pid}
-
 
 #--------------------> Meta data
 export envir=${envir:-test}
