@@ -82,7 +82,8 @@ if [[ ${flag_run_status} == 0 ]]; then
     ${USHstofs3d}/${fn_ush_script} 2 >> ${file_log}_2 2>&1   &
     ${USHstofs3d}/${fn_ush_script} 3 >> ${file_log}_3 2>&1   &
 
-
+    wait
+    
     export err=$?
     if [ $err -ne 0 ];
     then
