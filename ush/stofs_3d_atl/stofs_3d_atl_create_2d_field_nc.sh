@@ -90,7 +90,6 @@
       python ${PYstofs3d}/extract_slab_fcst_netcdf4.py  --date ${yyyymmdd_hh_ref}  --stack ${stack_no}
 
    done
-   wait
 
    msg="Completed: extract_slab_fcst_netcdf4.py, stack_no: 1,2,3 (all thress)"
    echo $msg; echo
