@@ -78,7 +78,9 @@ if [[ ${flag_run_status} == 0 ]]; then
     fn_ush_script=stofs_3d_atl_create_2d_field_nc.sh
     export pgm="${USHstofs3d}/${fn_ush_script}"
     
-    ${USHstofs3d}/${fn_ush_script} >> ${file_log} 2>&1  
+    ${USHstofs3d}/${fn_ush_script} 1 >> ${file_log}_1 2>&1   &
+    ${USHstofs3d}/${fn_ush_script} 2 >> ${file_log}_2 2>&1   &
+    ${USHstofs3d}/${fn_ush_script} 3 >> ${file_log}_3 2>&1   &
 
 
     export err=$?
