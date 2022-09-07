@@ -21,13 +21,16 @@
   pgmout=pgmout_stofs3d_create_2d_field_nc.$$
   rm -f $pgmout
 
-  list_day_no=(1 2 3)
+  idx_day_no=$1
+  echo "idx_day_no=${idx_day_no}"
+
+  #list_day_no=(1 2 3)
+  list_day_no=(${idx_day_no})
 
   cd ${DATA}
 
-
 # ------------------> check file existence
-  list_day_no=(1 2 3)
+  #list_day_no=(1 2 3)
 
   list_fn_base=(horizontalVelX  horizontalVelY  out2d  salinity  temperature  zCoordinates)
 
