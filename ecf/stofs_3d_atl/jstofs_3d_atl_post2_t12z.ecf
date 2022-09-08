@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#PBS  -N stofs_3d_atl_post1_t12z
+#PBS  -N stofs_3d_atl_post2_t12z
 #PBS  -A ESTOFS-DEV
 #PBS  -q dev
 #PBS  -j oe
