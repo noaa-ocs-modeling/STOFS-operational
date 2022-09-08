@@ -1,1 +1,0 @@
-../../../NWM/Outdated/Manning/auto.pl

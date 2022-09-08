@@ -1,1 +1,0 @@
-A complete manual for this module can be found [here](http://ccrm.vims.edu/schismweb/CoSiNE_manual_ZG_v5.pdf).

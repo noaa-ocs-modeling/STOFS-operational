@@ -1,1 +1,0 @@
-../../../NWM/Drag/auto.pl

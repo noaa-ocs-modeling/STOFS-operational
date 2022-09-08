@@ -1,2 +1,0 @@
-module icm_misc
-  use schism_glbl,only : rkind

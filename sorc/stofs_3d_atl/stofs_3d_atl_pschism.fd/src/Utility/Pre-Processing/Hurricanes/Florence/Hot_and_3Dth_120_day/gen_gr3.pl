@@ -1,1 +1,0 @@
-../../../NWM/Hot_and_3Dth/gen_gr3.pl
