@@ -111,6 +111,11 @@ cp -pf tmp_attr.nc ${fn_fnl_zeta_max}
         if [ $err -eq 0 ]; then
            cp -pf ${DATA}/outputs/${fn_fnl_zeta_max}  ${COMOUT}/${fn_fnl_zeta_max}
 
+          if [ $SENDDBN = YES ]; then
+            $DBNROOT/bin/dbn_alert MODEL STOFS_NETCDF $job ${COMOUT}/${fn_fnl_zeta_max}
+            export err=$?; err_chk
+          fi
+
         else
            mstofs="Creation/Archiving of ${DATA}/outputs/${fn_fnl_zeta_max} failed"
            echo $msg; echo $msg >> $pgmout
@@ -132,10 +137,6 @@ cd ${DATA}; pwd
 
           cp -f ${DATA}/${f_in_point} ${COMOUT}/${f_out_point_autoval}
       
-          if [ $SENDDBN = YES ]; then
-            $DBNROOT/bin/dbn_alert MODEL STOFS_NETCDF $job ${COMOUT}/${f_out_point_autoval}
-            export err=$?; err_chk
-          fi
 
           export err=$?
           if [ $err -eq 0 ]; then
@@ -145,6 +146,13 @@ cd ${DATA}; pwd
           fi    
 
           echo $msg; echo $msg >> $pgmout
+
+          if [ $SENDDBN = YES ]; then
+            $DBNROOT/bin/dbn_alert MODEL STOFS_NETCDF $job ${COMOUT}/${f_out_point_autoval} 
+            export err=$?; err_chk
+          fi
+
+
 
        else
           num_missing_files=`expr ${num_missing_files} + 1`
