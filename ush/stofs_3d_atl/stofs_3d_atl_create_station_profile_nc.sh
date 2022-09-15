@@ -83,6 +83,11 @@
            msg="Creation/Archiving of ${dir_output}/${fn_sta_profile_ncast_std} was successfully created"
            echo $msg; echo $msg >> $pgmout
 
+      if [ $SENDDBN = YES ]; then
+        $DBNROOT/bin/dbn_alert MODEL STOFS_NETCDF $job ${COMOUT}/${fn_sta_profile_ncast_std} 
+        export err=$?; err_chk
+      fi
+
         else
            msg="Creation/Archiving of ${dir_output}/${fn_sta_profile_ncast_std} failed"
            echo $msg; echo $msg >> $pgmout
@@ -110,6 +115,11 @@
 
            msg="Creation/Archiving of ${dir_output}/${fn_sta_profile_fcast_std} was successfully created"
            echo $msg; echo $msg >> $pgmout
+
+         if [ $SENDDBN = YES ]; then
+            $DBNROOT/bin/dbn_alert MODEL STOFS_NETCDF $job ${COMOUT}/${fn_sta_profile_fcast_std}
+            export err=$?; err_chk
+          fi
 
         else
            msg="Creation/Archiving of ${dir_output}/${fn_sta_profile_fcast_std} failed"
