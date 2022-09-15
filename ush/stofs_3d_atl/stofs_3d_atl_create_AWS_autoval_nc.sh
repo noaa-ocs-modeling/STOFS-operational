@@ -132,6 +132,10 @@ cd ${DATA}; pwd
 
           cp -f ${DATA}/${f_in_point} ${COMOUT}/${f_out_point_autoval}
       
+          if [ $SENDDBN = YES ]; then
+            $DBNROOT/bin/dbn_alert MODEL STOFS_NETCDF $job ${COMOUT}/${f_out_point_autoval}
+            export err=$?; err_chk
+          fi
 
           export err=$?
           if [ $err -eq 0 ]; then
