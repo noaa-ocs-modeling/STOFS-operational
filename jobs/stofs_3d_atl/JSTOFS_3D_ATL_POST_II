@@ -42,7 +42,7 @@ export envir=${envir:-test}
 
 export SENDCOM=${SENDCOM:-YES}
 export SENDECF=${SENDECF:-NO}
-export SENDDBN=${SENDDBN:-NO}
+export SENDDBN=${SENDDBN:-YES}
 export SENDDBN_NTC=${SENDDBN_NTC:-NO}
 
 export NET=${NET:-stofs3d}
