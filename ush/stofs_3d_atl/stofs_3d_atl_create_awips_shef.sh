@@ -165,6 +165,14 @@ export err=$?; #err_chk
       msg="Creation/Archiving of ${fn_shef_merged} was successfully created"
       echo $msg; echo $msg >> $pgmout
 
+
+      if [ $SENDDBN = YES ]; then
+        $DBNROOT/bin/dbn_alert MODEL STOFS_SHEF  $job ${COMOUT}/${fn_shef_merged} 
+        export err=$?; err_chk
+      fi
+    
+
+
       else
         mstofs="Creation/Archiving of ${dir_output}/${fn_shef_merged} failed"
         echo $msg; echo $msg >> $pgmout
