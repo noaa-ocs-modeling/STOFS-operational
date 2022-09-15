@@ -129,6 +129,12 @@
 	   echo $msg; echo;
            echo $msg >> $pgmout
 
+         if [ $SENDDBN = YES ]; then
+            $DBNROOT/bin/dbn_alert MODEL STOFS_NETCDF $job ${COMOUT}/${fn_2d_field_std}
+            export err=$?; err_chk
+          fi
+
+
       else
 	   msg="Not existed: ${fn_out_py}"$'\n'   
            msg=${msg}"Creation/Archiving of results/${fn_2d_field_std} failed"
