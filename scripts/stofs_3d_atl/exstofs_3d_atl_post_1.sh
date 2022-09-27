@@ -82,11 +82,42 @@ if [[ ${flag_run_status} == 0 ]]; then
     echo $msg
     echo $msg >> $pgmout
 
+    
+    # ---------> merge hotstart files
+    cd ${DATA}/outputs/
 
-    # ---------> create JoeJason file: 
-    # As of 09/01/2022, the Shapely3 and Proj of needed versions are unavailable on WCOSSII, 
-    # this software to create JoeJason is not included in the code delivery package. This will
-    # be added when both Shapely3 and Proj are available on WCOSSII.
+    idx_time_step_merge_hotstart=576
+    fn_merged_hotstart_ftn=hotstart_it\=${idx_time_step_merge_hotstart}.nc
+    fn_hotstart_stofs3d_merged_std=${RUN}.${cycle}.hotstart.stofs3d.nc
+
+    ${EXECstofs3d}/stofs_3d_atl_combine_hotstart  -i  ${idx_time_step_merge_hotstart}
+
+    export err=$?
+    pgm=${EXECstofs3d}/stofs_3d_atl_combine_hotstart
+
+    if [ $err -eq 0 ]; then
+       msg=`echo $pgm  completed normally`
+       echo $msg; echo $msg >> $pgmout
+
+       # fn_merged_hotstart_ftn=hotstart_it\=${idx_time_step_merge_hotstart}
+       if [ -s ${fn_merged_hotstart_ftn} ]; then
+          msg=`echo ${fn_merged_hotstart_ftn}} has been created`;
+          echo $msg; echo $msg >> $pgmout
+
+          fn_merged_hotstart_ftn_time_00=${fn_merged_hotstart_ftn}_time_00
+          ncap2 -O -s 'time=0.0' ${fn_merged_hotstart_ftn}  ${fn_merged_hotstart_ftn_time_00}
+
+          cpreq -pf ${fn_merged_hotstart_ftn_time_00} ${COMOUT}/${fn_hotstart_stofs3d_merged_std}
+
+       else
+         msg=`echo ${fn_merged_hotstart_ftn}} was not created`
+         echo $msg; echo $msg >> $pgmout
+       fi
+
+    else
+       msg=`echo $pgm did not complete normally`
+       echo $msg; echo $msg >> $pgmout
+    fi
 
 
 

@@ -73,55 +73,18 @@ if [[ ${flag_run_status} == 0 ]]; then
     echo $msg >> $pgmout
 
 
-
-    # ---------> merge hotstart files
-    cd ${DATA}/outputs/
-
-    idx_time_step_merge_hotstart=576
-    fn_merged_hotstart_ftn=hotstart_it\=${idx_time_step_merge_hotstart}.nc
-    fn_hotstart_stofs3d_merged_std=${RUN}.${cycle}.hotstart.stofs3d.nc
-
-    ${EXECstofs3d}/stofs_3d_atl_combine_hotstart  -i  ${idx_time_step_merge_hotstart}
-
-    export err=$?
-    pgm=${EXECstofs3d}/stofs_3d_atl_combine_hotstart
-
-    if [ $err -eq 0 ]; then
-       msg=`echo $pgm  completed normally`
-       echo $msg; echo $msg >> $pgmout
-
-       # fn_merged_hotstart_ftn=hotstart_it\=${idx_time_step_merge_hotstart}
-       if [ -s ${fn_merged_hotstart_ftn} ]; then
-          msg=`echo ${fn_merged_hotstart_ftn}} has been created`;
-          echo $msg; echo $msg >> $pgmout
-
-          fn_merged_hotstart_ftn_time_00=${fn_merged_hotstart_ftn}_time_00
-          ncap2 -O -s 'time=0.0' ${fn_merged_hotstart_ftn}  ${fn_merged_hotstart_ftn_time_00}
-
-          cpreq -pf ${fn_merged_hotstart_ftn_time_00} ${COMOUT}/${fn_hotstart_stofs3d_merged_std}
-
-       else
-         msg=`echo ${fn_merged_hotstart_ftn}} was not created`
-         echo $msg; echo $msg >> $pgmout
-       fi
-
-    else
-       msg=`echo $pgm did not complete normally`
-       echo $msg; echo $msg >> $pgmout
-    fi
-
-
-
     # ---------> create 2D field files
     file_log=log_create_2d_field_nc.${cycle}.log
     fn_ush_script=stofs_3d_atl_create_2d_field_nc.sh
     export pgm="${USHstofs3d}/${fn_ush_script}"
-    
-    ${USHstofs3d}/${fn_ush_script} 1 >> ${file_log}_1 2>&1   &
-    ${USHstofs3d}/${fn_ush_script} 2 >> ${file_log}_2 2>&1   &
-    ${USHstofs3d}/${fn_ush_script} 3 >> ${file_log}_3 2>&1   &
+ 
+    # purpose: wait for _post_1.sh to finish add_attr.sh
+      sleep 300s
 
-    wait
+    ${USHstofs3d}/${fn_ush_script} 1 >> ${file_log} 2>&1   
+    ${USHstofs3d}/${fn_ush_script} 2 >> ${file_log} 2>&1  
+    ${USHstofs3d}/${fn_ush_script} 3 >> ${file_log} 2>&1 
+
 
     export err=$?
     if [ $err -ne 0 ];
