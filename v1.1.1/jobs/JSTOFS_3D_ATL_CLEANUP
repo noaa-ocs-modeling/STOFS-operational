@@ -1,0 +1,37 @@
+#!/bin/bash
+
+set -x
+export PS4='$SECONDS + '
+echo `date` $0 `date -u` begin
+
+###########################################################
+# obtain unique process id (pid) and make temp directories
+###########################################################
+export DATA=${DATA:-${DATAROOT:?}/${jobid:?}}
+mkdir -p $DATA
+
+cd $DATA
+
+
+# Run setpdy and initialize PDY variables
+export cycle=t${cyc}z
+setpdy.sh
+. ./PDY
+
+###############################
+# Specify NET and RUN name
+##############################
+export NET=stofs
+export RUN=stofs_3d_atl
+
+export pgmout="OUTPUT.$$"
+
+env
+
+cd $DATAROOT
+
+if [ -d stofs_3d_atl_run_${cyc}_${envir}_${stofs_ver} ]; then
+  rm -rf stofs_3d_atl_run_${cyc}_${envir}_${stofs_ver}
+fi
+
+date
