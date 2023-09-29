@@ -1,0 +1,45 @@
+#!/bin/bash
+
+# Loading build.ver
+
+. ../../versions/stofs_3d_atl/build.ver
+
+
+# Loading modules
+
+# Xiaoxue:: subversion, prod_envir, prod_util, cfp, grib_util, wgrib2
+
+
+module purge
+module load envvar/$envvar_ver
+module load intel/$intel_ver
+module load PrgEnv-intel/$PrgEnv_intel_ver
+module load craype/$craype_ver
+module load cray-mpich/$cray_mpich_ver
+module load cray-pals/$cray_pals_ver
+module load hdf5/$hdf5_ver
+module load netcdf/$netcdf_ver
+module load imagemagick/$imagemagick_ver
+module load jasper/$jasper_ver
+module load libgeotiff/$libgeotiff_ver
+module load libjpeg/$libjpeg_ver
+module load libpng/$libpng_ver
+module load libtiff/$libtiff_ver
+module load udunits/$udunits_ver
+module load zlib/$zlib_ver
+module load bufr/$bufr_ver
+module load g2/$g2_ver
+module load w3nco/$w3nco_ver
+module load w3emc/$w3emc_ver
+
+module load python/${python_ver}
+
+module load cmake/${cmake_ver}
+
+module load gsl/${gsl_ver}
+module load nco/${nco_ver}
+module load zlib/$zlib_ver
+
+module use /apps/prod/hpc-stack/modulefiles/stack
+module load hpc/$hpc_ver
+
