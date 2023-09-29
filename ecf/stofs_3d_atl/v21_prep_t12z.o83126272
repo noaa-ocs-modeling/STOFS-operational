@@ -1,0 +1,238 @@
+Running prologue on parent mom node: nid003848...
+Job 83126272.cbqs01 nodelist: nid003848
+module list in jstofs_3d_atl_prep_t12z.ecf
+
+Currently Loaded Modules:
+  1) craype-x86-rome     (H)  11) netcdf/4.7.4       21) prod_envir/2.0.6
+  2) libfabric/1.11.0.0. (H)  12) jasper/2.0.25      22) prod_util/2.0.14
+  3) craype-network-ofi  (H)  13) udunits/2.2.28     23) cfp/2.0.4
+  4) envvar/1.0               14) zlib/1.2.11        24) libjpeg/9c
+  5) intel/19.1.3.304         15) bufr/11.6.0        25) grib_util/1.2.4
+  6) PrgEnv-intel/8.3.3       16) g2/3.4.5           26) gsl/2.7
+  7) craype/2.7.17            17) w3nco/2.4.1        27) wgrib2/2.0.8
+  8) cray-mpich/8.1.12        18) w3emc/2.9.1        28) nco/4.9.7
+  9) cray-pals/1.2.2          19) subversion/1.14.0  29) hpc/1.2.0
+ 10) hdf5/1.10.6              20) python/3.8.6
+
+  Where:
+   H:  Hidden Module
+
+ 
+
+
+In jstofs_3d_atl_prep_t12z.ecf: YMD_MODEL_RUN = 20230929 
+
+ 0 + pgm_jobs=JSTOFS_3D_ATL_PREP
+ 0 + echo
+
+ 0 + echo 'Running jobs script: JSTOFS_3D_ATL_PREP'
+Running jobs script: JSTOFS_3D_ATL_PREP
+ 0 + echo
+
+ 0 + '[' 1 -ne 0 ']'
+ 0 + '[' -n 20230929 ']'
+ 0 + export YMD_CURRENT_DATE=20230929
+ 0 + YMD_CURRENT_DATE=20230929
+ 0 + echo
+
+ 0 + echo 'Your input, argu[0]: YMD_CURRENT_DATE = 20230929'
+Your input, argu[0]: YMD_CURRENT_DATE = 20230929
+ 0 + echo
+
+ 0 + export job_name=v21_prep_inputs
+ 0 + job_name=v21_prep_inputs
+ 0 + export pid=61584
+ 0 + pid=61584
+ 0 + export outid=v21_prep_inputs
+ 0 + outid=v21_prep_inputs
+ 0 + export jobid=v21_prep_inputs.o61584
+ 0 + jobid=v21_prep_inputs.o61584
+ 0 + export pgmout=OUTPUT.61584
+ 0 + pgmout=OUTPUT.61584
+ 0 + export envir=test
+ 0 + envir=test
+ 0 + export SENDCOM=YES
+ 0 + SENDCOM=YES
+ 0 + export SENDECF=NO
+ 0 + SENDECF=NO
+ 0 + export SENDDBN=NO
+ 0 + SENDDBN=NO
+ 0 + export SENDDBN_NTC=NO
+ 0 + SENDDBN_NTC=NO
+ 0 + export NET=stofs3d
+ 0 + NET=stofs3d
+ 0 + export RUN=stofs_3d_atl
+ 0 + RUN=stofs_3d_atl
+ 0 + export RUN_ENVIR=test
+ 0 + RUN_ENVIR=test
+ 0 + export stofs_3d_atl_ver=v2.1.0
+ 0 + stofs_3d_atl_ver=v2.1.0
+ 0 + ROOT=
+ 0 + export ROOT=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0
+ 0 + ROOT=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0
+ 0 + COMROOT=
+ 0 + export COMROOT=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/com/stofs/v2.1
+ 0 + COMROOT=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/com/stofs/v2.1
+ 0 + DATAROOT=
+ 0 + export DATAROOT=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/work/stofs_3d_atl
+ 0 + DATAROOT=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/work/stofs_3d_atl
+ 0 + export COMPATH=
+ 0 + COMPATH=
+ 0 + export COMPATH=/lfs/h1/ops/prod/com
+ 0 + COMPATH=/lfs/h1/ops/prod/com
+ 0 + export COMPATH_DCOM=
+ 0 + COMPATH_DCOM=
+ 0 + export COMPATH_DCOM=/lfs/h1/ops/prod/dcom
+ 0 + COMPATH_DCOM=/lfs/h1/ops/prod/dcom
+ 0 + export cyc=12
+ 0 + cyc=12
+ 0 + export cycle=t12z
+ 0 + cycle=t12z
+ 0 + export N_DAYS_MODEL_RUN_PERIOD=5.0
+ 0 + N_DAYS_MODEL_RUN_PERIOD=5.0
+ 0 + export PDY=20230929
+ 0 + PDY=20230929
+ 0 + export KEEPDATA=YES
+ 0 + KEEPDATA=YES
+ 0 + DATA=
+ 0 + export DATA=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/work/stofs_3d_atl/prep_20230929.61584
+ 0 + DATA=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/work/stofs_3d_atl/prep_20230929.61584
+ 0 + mkdir -p /lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/work/stofs_3d_atl/prep_20230929.61584
+ 0 + cd /lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/work/stofs_3d_atl/prep_20230929.61584
+ 0 + setpdy.sh
+ completed cleanly
+ completed cleanly
+Source PDY script to export PDYm7, ..., PDY, ..., PDYp7 variables.
+ 0 + . ./PDY
+  0 + export PDYm7=20230922
+  0 + PDYm7=20230922
+  0 + export PDYm6=20230923
+  0 + PDYm6=20230923
+  0 + export PDYm5=20230924
+  0 + PDYm5=20230924
+  0 + export PDYm4=20230925
+  0 + PDYm4=20230925
+  0 + export PDYm3=20230926
+  0 + PDYm3=20230926
+  0 + export PDYm2=20230927
+  0 + PDYm2=20230927
+  0 + export PDYm1=20230928
+  0 + PDYm1=20230928
+  0 + export PDY=20230929
+  0 + PDY=20230929
+  0 + export PDYp1=20230930
+  0 + PDYp1=20230930
+  0 + export PDYp2=20231001
+  0 + PDYp2=20231001
+  0 + export PDYp3=20231002
+  0 + PDYp3=20231002
+  0 + export PDYp4=20231003
+  0 + PDYp4=20231003
+  0 + export PDYp5=20231004
+  0 + PDYp5=20231004
+  0 + export PDYp6=20231005
+  0 + PDYp6=20231005
+  0 + export PDYp7=20231006
+  0 + PDYp7=20231006
+ 0 + export PDYHH=2023092912
+ 0 + PDYHH=2023092912
+ 0 + export PDYHH_FCAST_BEGIN=2023092912
+ 0 + PDYHH_FCAST_BEGIN=2023092912
+  0 + /apps/ops/prod/nco/core/prod_util.v2.0.14/exec/ndate 72 2023092912
+ 0 + export PDYHH_FCAST_END=2023100212
+ 0 + PDYHH_FCAST_END=2023100212
+  0 + /apps/ops/prod/nco/core/prod_util.v2.0.14/exec/ndate -24 2023092912
+ 0 + export PDYHH_NCAST_BEGIN=2023092812
+ 0 + PDYHH_NCAST_BEGIN=2023092812
+ 0 + echo
+
+ 0 + echo PDYHH = 2023092912
+PDYHH = 2023092912
+ 0 + echo PDYHH_FCAST_BEGIN = 2023092912
+PDYHH_FCAST_BEGIN = 2023092912
+ 0 + echo PDYHH_FCAST_END = 2023100212
+PDYHH_FCAST_END = 2023100212
+ 0 + echo PDYHH_NCAST_BEGIN = 2023092812
+PDYHH_NCAST_BEGIN = 2023092812
+ 0 + export DATA_prep_nwm=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/work/stofs_3d_atl/prep_20230929.61584/river
+ 0 + DATA_prep_nwm=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/work/stofs_3d_atl/prep_20230929.61584/river
+ 0 + export DATA_prep_river_st_lawrence=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/work/stofs_3d_atl/prep_20230929.61584/river_st_lawrence
+ 0 + DATA_prep_river_st_lawrence=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/work/stofs_3d_atl/prep_20230929.61584/river_st_lawrence
+ 0 + export DATA_prep_gfs=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/work/stofs_3d_atl/prep_20230929.61584/gfs
+ 0 + DATA_prep_gfs=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/work/stofs_3d_atl/prep_20230929.61584/gfs
+ 0 + export DATA_prep_hrrr=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/work/stofs_3d_atl/prep_20230929.61584/hrrr
+ 0 + DATA_prep_hrrr=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/work/stofs_3d_atl/prep_20230929.61584/hrrr
+ 0 + export DATA_prep_rtofs=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/work/stofs_3d_atl/prep_20230929.61584/rtofs
+ 0 + DATA_prep_rtofs=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/work/stofs_3d_atl/prep_20230929.61584/rtofs
+ 0 + export DATA_prep_restart=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/work/stofs_3d_atl/prep_20230929.61584/restart
+ 0 + DATA_prep_restart=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/work/stofs_3d_atl/prep_20230929.61584/restart
+ 0 + mkdir -p /lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/work/stofs_3d_atl/prep_20230929.61584/river /lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/work/stofs_3d_atl/prep_20230929.61584/gfs /lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/work/stofs_3d_atl/prep_20230929.61584/hrrr /lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/work/stofs_3d_atl/prep_20230929.61584/rtofs /lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/work/stofs_3d_atl/prep_20230929.61584/restart
+ 0 + echo DATA = /lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/work/stofs_3d_atl/prep_20230929.61584
+DATA = /lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/work/stofs_3d_atl/prep_20230929.61584
+ 0 + echo DATA_prep_nwm=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/work/stofs_3d_atl/prep_20230929.61584/river
+DATA_prep_nwm=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/work/stofs_3d_atl/prep_20230929.61584/river
+ 0 + echo DATA_prep_gfs=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/work/stofs_3d_atl/prep_20230929.61584/gfs
+DATA_prep_gfs=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/work/stofs_3d_atl/prep_20230929.61584/gfs
+ 0 + echo DATA_prep_hrrr=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/work/stofs_3d_atl/prep_20230929.61584/hrrr
+DATA_prep_hrrr=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/work/stofs_3d_atl/prep_20230929.61584/hrrr
+ 0 + echo DATA_prep_rtofs=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/work/stofs_3d_atl/prep_20230929.61584/rtofs
+DATA_prep_rtofs=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/work/stofs_3d_atl/prep_20230929.61584/rtofs
+ 0 + echo DATA_prep_restart=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/work/stofs_3d_atl/prep_20230929.61584/restart
+DATA_prep_restart=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/work/stofs_3d_atl/prep_20230929.61584/restart
+ 0 + export JOBstofs3d=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/jobs/stofs_3d_atl
+ 0 + JOBstofs3d=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/jobs/stofs_3d_atl
+ 0 + export EXECstofs3d=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/exec/stofs_3d_atl
+ 0 + EXECstofs3d=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/exec/stofs_3d_atl
+ 0 + export FIXstofs3d=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/fix/stofs_3d_atl
+ 0 + FIXstofs3d=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/fix/stofs_3d_atl
+ 0 + export PARMstofs3d=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/parm/stofs_3d_atl
+ 0 + PARMstofs3d=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/parm/stofs_3d_atl
+ 0 + export SORCstofs3d=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/sorc/stofs_3d_atl
+ 0 + SORCstofs3d=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/sorc/stofs_3d_atl
+ 0 + export SCRIstofs3d=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/scripts/stofs_3d_atl
+ 0 + SCRIstofs3d=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/scripts/stofs_3d_atl
+ 0 + export USHstofs3d=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/ush/stofs_3d_atl
+ 0 + USHstofs3d=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/ush/stofs_3d_atl
+ 0 + export ECFstofs3d=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/ecf/stofs_3d_atl
+ 0 + ECFstofs3d=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/ecf/stofs_3d_atl
+ 0 + export PYstofs3d=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/ush/stofs_3d_atl/pysh
+ 0 + PYstofs3d=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/ush/stofs_3d_atl/pysh
+ 0 + export jlogfile=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/work/stofs_3d_atl/prep_20230929.61584/jlogfile.20230929.61584
+ 0 + jlogfile=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/work/stofs_3d_atl/prep_20230929.61584/jlogfile.20230929.61584
+ 0 + COMIN=
+ 0 + export COMIN=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/com/stofs/v2.1/stofs_3d_atl.20230929
+ 0 + COMIN=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/com/stofs/v2.1/stofs_3d_atl.20230929
+ 0 + COMINstofs=
+ 0 + export COMINstofs=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/com/stofs/v2.1
+ 0 + COMINstofs=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/com/stofs/v2.1
+ 0 + export COMOUT=
+ 0 + COMOUT=
+ 0 + export COMOUT=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/com/stofs/v2.1/stofs_3d_atl.20230929
+ 0 + COMOUT=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/com/stofs/v2.1/stofs_3d_atl.20230929
+ 0 + COMOUTrerun=
+ 0 + export COMOUTrerun=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/com/stofs/v2.1/stofs_3d_atl.20230929/rerun
+ 0 + COMOUTrerun=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/com/stofs/v2.1/stofs_3d_atl.20230929/rerun
+ 0 + mkdir -p /lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/com/stofs/v2.1/stofs_3d_atl.20230929 /lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/com/stofs/v2.1/stofs_3d_atl.20230929 /lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/com/stofs/v2.1/stofs_3d_atl.20230929/rerun
+ 0 + export COMOUT_PREV=
+ 0 + COMOUT_PREV=
+ 0 + export COMOUT_PREV=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/com/stofs/v2.1/stofs_3d_atl.20230928
+ 0 + COMOUT_PREV=/lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/com/stofs/v2.1/stofs_3d_atl.20230928
+ 0 + export COMINadt=
+ 0 + COMINadt=
+ 0 + export COMINadt=/lfs/h1/ops/prod/dcom
+ 0 + COMINadt=/lfs/h1/ops/prod/dcom
+ 0 + export COMINgfs=
+ 0 + COMINgfs=
+ 0 + export COMINgfs=/lfs/h1/ops/prod/com/gfs/v16.3
+ 0 + COMINgfs=/lfs/h1/ops/prod/com/gfs/v16.3
+ 0 + export COMINhrrr=
+ 0 + COMINhrrr=
+ 0 + export COMINhrrr=/lfs/h1/ops/prod/com/hrrr/v4.1
+ 0 + COMINhrrr=/lfs/h1/ops/prod/com/hrrr/v4.1
+ 0 + export COMINrtofs=
+ 0 + COMINrtofs=
+ 0 + export COMINrtofs=/lfs/h1/ops/prod/com/rtofs/v2.3
+ 0 + COMINrtofs=/lfs/h1/ops/prod/com/rtofs/v2.3
+ 0 + export COMINnwm=/lfs/h1/ops/prod/com/nwm/v3.0
+ 0 + COMINnwm=/lfs/h1/ops/prod/com/nwm/v3.0
+ 0 + /lfs/h1/nos/estofs/noscrub/IT-stofs.v2.1.0/scripts/stofs_3d_atl/exstofs_3d_atl_prep_processing.sh
