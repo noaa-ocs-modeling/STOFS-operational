@@ -65,9 +65,11 @@
   cpreq $COMOUTrerun/${RUN}_fcst.62.nc 		fort.62.nc
   cpreq $COMOUTrerun/${RUN}_fcst.63.nc 		fort.63.nc
   cpreq $COMOUTrerun/${RUN}_fcst.64.nc 		fort.64.nc
-  cpreq $COMOUTrerun/${RUN}_maxele.63.nc 	maxele.63.nc
-  cpreq $COMOUTrerun/${RUN}_maxvel.63.nc 	maxvel.63.nc
-  cpreq $COMOUTrerun/${RUN}_maxwvel.63.nc 	maxwvel.63.nc
+  if [ -f $COMOUTrerun/${RUN}_maxele.63.nc ]; then
+     cpreq $COMOUTrerun/${RUN}_maxele.63.nc 	maxele.63.nc
+     cpreq $COMOUTrerun/${RUN}_maxvel.63.nc 	maxvel.63.nc
+     cpreq $COMOUTrerun/${RUN}_maxwvel.63.nc 	maxwvel.63.nc
+  fi
 
 # --------------------------------------------------------------------------- #
 # 3.  Copy stofs_2d_glo partmesh, grid, and template files 

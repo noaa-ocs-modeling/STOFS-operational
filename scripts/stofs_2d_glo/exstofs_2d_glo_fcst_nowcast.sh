@@ -75,7 +75,7 @@
      if [ -f $rdir/$rfile ]; then
         cpreq $rdir/$rfile ${time_beg}.restart
 	if [ $cyc = "00" ]; then
-           if [ ! -f $COMIN/database.tar.gz ]; then
+           if [ -f $COMIN/database.tar.gz ]; then
               cpreq $rdir/database.tar.gz $COMIN/.
 	   fi
         fi
@@ -245,9 +245,9 @@
      cpfs fort.62.nc                      $COMOUTrerun/${RUN}_fcst.62.nc
      cpfs fort.63.nc                      $COMOUTrerun/${RUN}_fcst.63.nc
      cpfs fort.64.nc                      $COMOUTrerun/${RUN}_fcst.64.nc
-     cpfs maxele.63.nc                    $COMOUTrerun/${RUN}_maxele.63.nc
-     cpfs maxvel.63.nc                    $COMOUTrerun/${RUN}_maxvel.63.nc
-     cpfs maxwvel.63.nc                   $COMOUTrerun/${RUN}_maxwvel.63.nc
+#     cpfs maxele.63.nc                    $COMOUTrerun/${RUN}_maxele.63.nc
+#     cpfs maxvel.63.nc                    $COMOUTrerun/${RUN}_maxvel.63.nc
+#     cpfs maxwvel.63.nc                   $COMOUTrerun/${RUN}_maxwvel.63.nc
      echo "Copying ${time_now}.restart to $COMOUT/${RUN}.${cycle}.restart"
      cpfs ${time_now}.restart             $COMOUT/${RUN}.${cycle}.restart
   fi
