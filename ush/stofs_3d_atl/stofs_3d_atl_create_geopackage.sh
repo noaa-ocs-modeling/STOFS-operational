@@ -15,15 +15,10 @@
 # ---------------------------> Begin ...
 # set -x
 
-# (Following is to be updated upon installation of python 3.10.4: new packages
-# load ve/stofs/2.0.1, 2023/9/25)
-#module unload python
-#source /apps/prod/ve/intel/stofs/1.1/bin/activate
-
 
   fn_this_sh="stofs_3d_atl_create_geopackage.sh"
 
-  echo "${fn_this_sh} began at UTC: " `date -u`
+  echo "${fn_this_sh} began " 
   echo; echo
 
   pgmout=${fn_this_sh}.$$
@@ -121,7 +116,7 @@
 export err=$?; #err_chk  
 
 echo 
-echo "${fn_this_sh} completed at UTC: `date`"
+echo "${fn_this_sh} completed "
 echo 
 
 

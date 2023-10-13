@@ -16,7 +16,7 @@
 
   fn_this_script="stofs_3d_atl_create_obc_nudge.sh"
 
-  echo "${fn_this_script} started at UTC `date -u +%Y%m%d%H`"
+  echo "${fn_this_script} started "
 
   echo "module list in ${fn_this_script}"
   module list
@@ -789,7 +789,7 @@ done # for files
 
 
   echo 
-  echo "stofs_3d_atl_create_obc_forcing_rtofs.sh completed at date/time: " `date` 
+  echo "stofs_3d_atl_create_obc_forcing_rtofs.sh completed "  
   echo 
 
 

@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 
 ################################################################################
 #  Name: stofs_3d_atl_create_bctides_in.sh                                     # 
@@ -12,7 +12,7 @@
 # ---------------------------> Begin ...
 # set -x
 
-  echo 'stofs_3d_atl_create_bctides_in.sh started at UTC' `date -u +%Y%m%d%H`
+  echo 'stofs_3d_atl_create_bctides_in.sh started'
 
 
 # ---------------------------> directory/file names
@@ -79,7 +79,7 @@ fn_bctides_in=bctides.in
 
 
 echo 
-echo 'stofs_3d_atl_create_bctides_in.sh completed at date/time:'  `date`
+echo 'stofs_3d_atl_create_bctides_in.sh completed ' 
 echo ' '
 
 

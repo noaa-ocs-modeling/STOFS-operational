@@ -14,7 +14,7 @@
 # ---------------------------> Begin ...
 # set -x
 
-echo 'The script stofs_3d_atl_create_river_forcing_nwm.sh started at UTC' `date -u +%Y%m%d%H`
+echo 'The script stofs_3d_atl_create_river_forcing_nwm.sh started ' 
 
 
 # ---------------------------> directory/file names
@@ -244,7 +244,8 @@ fi
 # ------------------> create river vsource.th 
 # vsink.th & msource.th are static files for v.6.1 grid
 
-  str_yyyy_mm_dd_hr=`date -d ${PDYHH_NCAST_BEGIN:0:8}  +%Y-%m-%d`-${cyc}
+  #str_yyyy_mm_dd_hr=`date -d ${PDYHH_NCAST_BEGIN:0:8}  +%Y-%m-%d`-${cyc}
+   str_yyyy_mm_dd_hr=${PDYHH_NCAST_BEGIN:0:4}-${PDYHH_NCAST_BEGIN:4:2}-${PDYHH_NCAST_BEGIN:6:2}-${cyc}
 
   echo 'Beginning date of river data (th) (yyyy_mm_dd_hr) = '  $str_yyyy_mm_dd_hr
 
@@ -458,7 +459,7 @@ done  # for str_fn_river_th
 ls -l ${COMOUTrerun}/*.th
 
 echo
-echo "The script stofs_3d_atl_create_river_forcing_nwm.sh completed at date/time: " `date`
+echo "The script stofs_3d_atl_create_river_forcing_nwm.sh completed " 
 echo 
 
 

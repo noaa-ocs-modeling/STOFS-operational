@@ -25,7 +25,7 @@
 
   fn_this_sh="stofs_3d_atl_netcdf2grib.sh"
 
-  echo "${fn_this_sh} began at UTC: " `date -u`
+  echo "${fn_this_sh} began at UTC: "
 
   echo "module list::"
   module list
@@ -164,7 +164,7 @@ export err=$?; #err_chk
 
 
 echo 
-echo "${fn_this_sh} completed at UTC: `date`"
+echo "${fn_this_sh} completed "
 echo 
 
 

@@ -13,7 +13,7 @@
 # ---------------------------> Begin ...
 # set -x
 
-echo 'The script stofs_3d_atl_create_surface_forcing_hrrr.sh started at UTC' `date -u +%Y%m%d%H`
+echo 'The script stofs_3d_atl_create_surface_forcing_hrrr.sh started ' 
 
 
 # ---------------------------> directory/file names
@@ -220,7 +220,7 @@ export err=$?;  #err_chk
 
 
 echo
-echo "The script stofs_3d_atl_create_surface_forcing_hrrr.sh completed at date/time: " `date`
+echo "The script stofs_3d_atl_create_surface_forcing_hrrr.sh completed  " 
 echo 
 
 

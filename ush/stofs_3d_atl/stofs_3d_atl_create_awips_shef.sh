@@ -17,7 +17,7 @@
 
   fn_this_sh="stofs_3d_atl_create_awips_shef.sh"
 
-  echo "${fn_this_sh} began at UTC: " `date -u`
+  echo "${fn_this_sh} began at UTC: "
 
   pgmout=${fn_this_sh}.$$
   rm -f $pgmout
@@ -79,8 +79,8 @@
 
 
 # ------------------> create 6-min station time series file (.nc)
-     yyyymmdd_hh_ref=`date -d ${PDYHH_NCAST_BEGIN:0:8}  +%Y-%m-%d`-${cyc}
-  
+     yyyymmdd_hh_ref=${PDYHH_NCAST_BEGIN:0:4}-${PDYHH_NCAST_BEGIN:4:2}-${PDYHH_NCAST_BEGIN:6:2}-${cyc}
+
      dir_input=${DATA}/outputs/          # dir_input=./outputs/
      dir_work_shef=${DATA}/dir_shef      # dir_output=./
 
@@ -203,7 +203,7 @@ export err=$?; #err_chk
 export err=$?; #err_chk
 
 echo 
-echo "${fn_this_sh} completed at UTC: `date`"
+echo "${fn_this_sh} completed "
 echo 
 
 

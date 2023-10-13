@@ -16,7 +16,7 @@
 # set -x
 
   fn_this_script="stofs_3d_atl_create_param_nml.sh"
-  echo "${fn_this_script}  started at UTC `date -u +%Y%m%d%H`"
+  echo "${fn_this_script}  started "
 
   echo "module list in ${fn_this_script}"
   module list
@@ -75,6 +75,6 @@
 
 echo 
 echo 'param.nml created: ' $fn_param_modelRun_date_tag
-echo 'stofs_3d_atl_create_param_nml.sh completed at date/time:'  `date`
+echo 'stofs_3d_atl_create_param_nml.sh completed '  
 echo
 

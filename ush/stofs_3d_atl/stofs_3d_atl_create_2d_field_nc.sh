@@ -16,7 +16,7 @@
 # set -x
 #  set +H
 
-  echo " stofs_3d_atl_create_2d_field_nc.sh began at UTC: " `date -u`
+  echo " stofs_3d_atl_create_2d_field_nc.sh began" 
 
   pgmout=pgmout_stofs3d_create_2d_field_nc.$$
   rm -f $pgmout
@@ -55,7 +55,7 @@
 
 
 # ------------------> create 2D nc: intpl
-  yyyymmdd_hh_ref=`date -d ${PDYHH_NCAST_BEGIN:0:8}  +%Y-%m-%d`-${cyc}
+  yyyymmdd_hh_ref=${PDYHH_NCAST_BEGIN:0:4}-${PDYHH_NCAST_BEGIN:4:2}-${PDYHH_NCAST_BEGIN:6:2}-${cyc}
 
   #for k_no in ${list_day_no[@]};
 
@@ -74,7 +74,6 @@
 
 
       echo "Processing: results/stack_no = ${stack_no}" 
-      echo `date -u`
 
       mkdir -p results
       python ${PYstofs3d}/extract_slab_fcst_netcdf4.py  --date ${yyyymmdd_hh_ref}  --stack ${stack_no}  >> $pgmout 2> errfile
@@ -117,7 +116,7 @@
 export err=$?; #err_chk  
 
 echo 
-echo "stofs_3d_atl_create_2d_field_nc.sh  completed at UTC: `date`"
+echo "stofs_3d_atl_create_2d_field_nc.sh  completed "
 echo 
 
 

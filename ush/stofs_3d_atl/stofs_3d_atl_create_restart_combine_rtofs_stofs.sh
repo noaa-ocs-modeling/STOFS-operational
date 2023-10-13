@@ -18,12 +18,12 @@
 # set -x
   set +H
 
-# seton='-xa'
+ seton='-xa'
 #  setoff='+xa'
-#  set $seton
+  set $seton
 
  fn_this_script=stofs_3d_atl_create_restart_combine_rtofs_stofs.sh
- echo "${fn_this_script} started at UTC `date -u ` "
+ echo "${fn_this_script} started  "
 
 
 # ---------------------------> directory/file names
@@ -109,7 +109,9 @@ idx_y2_3dz=815
    for k in ${days[@]}; do
 
       #list_dates="$list_dates,`date -d "${yyyymmdd_rst} ${k} days ago" +%Y%m%d`"
-      date_k=`date -d "${yyyymmdd_rst} ${k} days ago" +%Y%m%d`
+      #date_k=`date -d "${yyyymmdd_rst} ${k} days ago" +%Y%m%d`
+      date_k=$(finddate.sh ${yyyymmdd_rst} d-${k})
+
 
       # 2D 
       FILESIZE=150000000
@@ -334,7 +336,8 @@ fi
   cnt_files=0
   for k in ${days[@]}; do
 
-      date_k=`date -d "${PDYHH_FCAST_BEGIN:0:8} ${k} days ago" +%Y%m%d`
+      #date_k=`date -d "${PDYHH_FCAST_BEGIN:0:8} ${k} days ago" +%Y%m%d`
+      date_k=$(finddate.sh ${PDYHH_FCAST_BEGIN:0:8} d-${k})
 
       fn_hotstart_oper_chk=${COMROOT}/${RUN}.${date_k}/${RUN}.${cycle}.hotstart.stofs3d.nc
 
@@ -432,7 +435,7 @@ fi
 
 
 echo 
-echo "${fn_this_script} completed at UTC `date -u ` "
+echo "${fn_this_script} completed "
 
 echo 
 

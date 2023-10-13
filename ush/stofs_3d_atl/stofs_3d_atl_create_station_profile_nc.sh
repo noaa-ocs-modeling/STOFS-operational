@@ -14,7 +14,7 @@
 # ---------------------------> Begin ...
 # set -x
 
-  echo " stofs_3d_atl_create_profile_2d_nc.sh began at UTC: " `date -u`
+  echo " stofs_3d_atl_create_profile_2d_nc.sh began at UTC: "
 
   pgmout=pgmout_stofs3d_create_profile_2d_nc.$$
   rm -f $pgmout
@@ -66,8 +66,10 @@
      stack_start=1
      stack_end=2
      dir_output=results
-     yyyymmdd_hh_ref=`date -d ${PDYHH_NCAST_BEGIN:0:8}  +%Y-%m-%d`-${cyc}
-  
+     yyyymmdd_hh_ref=${PDYHH_NCAST_BEGIN:0:4}-${PDYHH_NCAST_BEGIN:4:2}-${PDYHH_NCAST_BEGIN:6:2}-${cyc}
+
+
+
      python ${PYstofs3d}/get_stations_profile.py --date ${yyyymmdd_hh_ref}  --stack_start  ${stack_start}  --stack_end  ${stack_end}  --output_dir  ${dir_output}  >> $pgmout 2> errfile
 
      cp -paf ${dir_output}/stofs_stations_forecast.nc ${dir_output}/stofs_stations_nowcast.nc_original
@@ -102,8 +104,9 @@
        stack_end=10
 
      dir_output=results
-     yyyymmdd_hh_ref=`date -d ${PDYHH_FCAST_BEGIN:0:8}  +%Y-%m-%d`-${cyc}
- 
+     yyyymmdd_hh_ref=${PDYHH_FCAST_BEGIN:0:4}-${PDYHH_FCAST_BEGIN:4:2}-${PDYHH_FCAST_BEGIN:6:2}-${cyc}
+
+
      python ${PYstofs3d}/get_stations_profile.py --date ${yyyymmdd_hh_ref}  --stack_start  ${stack_start}  --stack_end  ${stack_end}  --output_dir  ${dir_output}  >> $pgmout 2> errfile
 
      cp -paf ${dir_output}/stofs_stations_forecast.nc ${dir_output}/stofs_stations_forecast.nc_original
@@ -134,7 +137,7 @@
 export err=$?; #err_chk  
 
 echo 
-echo "stofs_3d_atl_create_profile_2d_nc.sh  completed at UTC: `date`"
+echo "stofs_3d_atl_create_profile_2d_nc.sh  completed "
 echo 
 
 

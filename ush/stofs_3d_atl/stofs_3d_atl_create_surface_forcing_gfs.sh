@@ -14,7 +14,7 @@
 # ---------------------------> Begin ...
 # set -x
 
-echo 'stofs_3d_atl_create_surface_forcing_gfs.sh started at UTC' `date -u +%Y%m%d%H`
+echo 'stofs_3d_atl_create_surface_forcing_gfs.sh started ' 
 
 
 # ---------------------------> directory/file names
@@ -396,7 +396,7 @@ k=0
 
 
 echo
-echo "The script stofs_3d_atl_create_surface_forcing_gfs.sh completed at date/time: " `date`
+echo "The script stofs_3d_atl_create_surface_forcing_gfs.sh completed " 
 echo 
 
 

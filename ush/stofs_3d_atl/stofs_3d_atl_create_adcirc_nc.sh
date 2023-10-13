@@ -18,7 +18,7 @@
 
   fn_this_sh="stofs_3d_atl_create_adcirc_nc.sh"
 
-  echo "${fn_this_sh} began at UTC: " `date -u`
+  echo "${fn_this_sh} began"
 
   pgmout=${fn_this_sh}.$$
   rm -f $pgmout
@@ -129,7 +129,7 @@
 
 
 echo 
-echo "${fn_this_sh} completed at UTC: `date`"
+echo "${fn_this_sh} completed "
 echo 
 
 

@@ -17,7 +17,7 @@
 
   fn_this_sh="stofs_3d_atl_add_attr_2d_3d_nc.sh"
 
-  echo " ${fn_this_sh} began at UTC: "  `date -u`  
+  echo " ${fn_this_sh} began"  
  
   pgmout=`pwd`/log_${fn_this_sh}.$$
   rm -f $pgmout
@@ -196,7 +196,7 @@ done
 #    export err=$?; #err_chk
 
 echo 
-echo "${fn_this_sh} completed at UTC: `date`"
+echo "${fn_this_sh} completed "
 echo 
 
 
