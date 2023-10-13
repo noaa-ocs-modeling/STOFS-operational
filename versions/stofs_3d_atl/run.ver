@@ -48,5 +48,11 @@ export zlib_ver=1.2.11
 
 export COLDSTART=NO
 
+export gfs_ver=v16.3
+export hrrr_ver=v4.1
+export rtofs_ver=v2.3
+export nwm_ver=v3.0
+
+
 export MAILTO=nco.spa@noaa.gov,zizang.yang@noaa.gov,edward.myers@noaa.gov,gregory.seroka@noaa.gov,ncep.sos@noaa.gov,nco.sos@noaa.gov
 
