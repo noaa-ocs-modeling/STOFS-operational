@@ -4,7 +4,7 @@
 #  Name: exstofs_3d_atl_post_3.sh                                            #
 #  This script is a postprocessor to create the hotstart file, namely        #
 #  stofs_3d_atl.t12z.hotstart.stofs3d.nc and copies the files to the com     #
-#  directory. If the current model run date is Janunary 5, the T/S fields in #
+#  directory. If the current model run date is April 5, the T/S fields in #
 #  hotstart file would be a combined STOFS-3D-atl outpus and G-RTOFS results.#
 #                                                                            #
 #  Remarks:                                                                  #
@@ -21,7 +21,7 @@
   file_log=log_create_restart.${cycle}.log
 
   fn_this_script=exstofs_3d_atl_post_3
-  msg="${fn_this_script}.sh  started at UTC: `date  `"
+  msg="${fn_this_script}.sh  started"
   echo "$msg"
   #postmsg "$jlogfile" "$msg"
 
@@ -96,7 +96,7 @@
 
 
   echo
-  echo $msg at `date`
+  echo $msg 
   echo
 
 

@@ -18,7 +18,7 @@
 
 # ----------------------->  
 
-  msg="stofs_3d_atl_ncast_forecast.sh started at UTC:  `date`"
+  msg="stofs_3d_atl_ncast_forecast.sh started"
   echo "$msg"
   postmsg "$jlogfile" "$msg"
 
@@ -440,14 +440,14 @@ done
 
 # =======================================> Hot restart or cold restart
   
-  msg="\n Begin: ${SCRIstofs3d}/exstofs_3d_atl_hot_restart_prep.sh at `date` \n"
+  msg="\n Begin: ${SCRIstofs3d}/exstofs_3d_atl_hot_restart_prep.sh \n"
   echo -e  $msg; echo -e  $msg >> $pgmout
 
   ${SCRIstofs3d}/exstofs_3d_atl_hot_restart_prep.sh   >> $pgmout 2>>  errfile 
 
   export err=$?
   if [ $err -eq 0 ]; then
-      msg="\n  End: ${SCRIstofs3d}/exstofs_3d_atl_hot_restart_prep.sh  completed normally at `date` \n"
+      msg="\n  End: ${SCRIstofs3d}/exstofs_3d_atl_hot_restart_prep.sh  completed normally \n"
       echo -e  $msg; echo -e  $msg >> $pgmout
   else
     msg=`echo ${SCRIstofs3d}/exstofs_3d_atl_hot_restart_prep.sh  did not complete normally`
@@ -461,7 +461,7 @@ if [[ $(find  -L hotstart.nc -type f -size  +20G 2>/dev/null) ]]; then
     msg="restart.nc:  ${fn_restart_rerun}"
     
     list_fn_avail_input_forcing+=(" \n " $fn_restart_rerun)
-    msg="Valid: restart.nc=./hotstart.nc: checking at `date`\n"
+    msg="Valid: restart.nc=./hotstart.nc: checked \n"
 
 else 
     fn_restart_hotstart="${fn_restart_rerun}"
@@ -490,12 +490,12 @@ postmsg "$jlogfile" "$msg"
 # ---------------------------------------> SCHISM model run
  
   msg=''
-  msg+="Before submission of mpiexe pschchism: `date` "
+  msg+="Before submission of mpiexe pschchism: "
         
 if [ ${FLAG_all_exist_model_input_files} -eq 0 ];then
      msg+="FATAL EORROR:: FLAG_all_exist_model_input_files=${FLAG_all_exist_model_input_files}"
      msg+=`echo -e ${list_fn_missed_input_forcing[@]}`
-     msg+="\n Script run is being stopped at this step, UTM: `date`"
+     msg+="\n Script run is being stopped at this step"
 
      echo -e  $msg; echo -e  $msg >> $pgmout
      postmsg "$jlogfile" "$msg"
@@ -511,12 +511,12 @@ else
      postmsg "$jlogfile" "$msg"
 
   
-  msg="`date` :: Submited - mpiexec -n $NCPU_PBS  --cpu-bind core  ${EXECstofs3d}/pschism $n_scribes"
+  msg=" Submited - mpiexec -n $NCPU_PBS  --cpu-bind core  ${EXECstofs3d}/pschism $n_scribes"
   echo "${msg}"; echo "$msg" >> "$pgmout"
 
   mpiexec -n $NCPU_PBS  --cpu-bind core  ${EXECstofs3d}/stofs_3d_atl_pschism  $n_scribes  >> $pgmout 2>>  errfile
 
-  msg="`date`:: Finished - mpiexec -n $NCPU_PBS  --cpu-bind core  ${EXECstofs3d}/pschism $n_scribes"
+  msg="Finished - mpiexec -n $NCPU_PBS  --cpu-bind core  ${EXECstofs3d}/pschism $n_scribes"
   echo "${msg}"; echo "$msg" >> "$pgmout"
 
   export err=$?
@@ -554,7 +554,7 @@ else
 
 
   echo
-  echo -e  $msg at `date`
+  echo -e  $msg 
   echo 
 
 

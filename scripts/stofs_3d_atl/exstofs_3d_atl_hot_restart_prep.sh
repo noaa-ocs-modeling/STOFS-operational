@@ -10,14 +10,14 @@
 #                                                                                                 May 2023      #
 #################################################################################################################
 
-#  seton='-xa'
+  seton='-xa'
 #  setoff='+xa'
-#  set $seton
+  set $seton
 
 # ----------------------->
   fn_this_script=exstofs_3d_atl_create_hot_restart.sh
 
-  msg="${fn_this_script}.sh  started at UTC: `date  `"
+  msg="${fn_this_script}.sh  started"
   echo "$msg"
   postmsg "$jlogfile" "$msg"
 
@@ -185,7 +185,7 @@ else
 
        # fn_merged_hotstart_ftn=hotstart_it\=${idx_time_step_merge_hotstart}
        if [ -s ${fn_merged_hotstart_ftn} ]; then
-          msg=`echo ${fn_merged_hotstart_ftn} has been created at; date`;
+          msg="echo ${fn_merged_hotstart_ftn} has been created";
           echo $msg; echo $msg >> $pgmout
 
           cpreq -pf ${fn_merged_hotstart_ftn}  ${COMOUT}/rerun/${fn_hotstart_stofs3d_merged_std}_hot_restart

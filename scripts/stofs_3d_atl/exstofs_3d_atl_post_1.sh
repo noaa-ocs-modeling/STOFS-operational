@@ -21,14 +21,13 @@
 
   fn_this_sh="exstofs_3d_atl_post_1"
 
-  echo "${fn_this_sh}.sh began at UTC: " `date `
 
   echo "module list::"
   module list
   echo; echo
 
 
-  msg="${fn_this_sh}.sh started at UTC:  `date `"
+  msg="${fn_this_sh}.sh started "
   echo "$msg"
   postmsg "$jlogfile" "$msg"
 
@@ -47,17 +46,16 @@
 fn_mirror=outputs/mirror.out
 str_model_run_status="Run completed successfully"
 
-max_seconds=$(( 5 * 3600 ))   #  wait for upto 5 hrs
 time_sleep_s=600
-time_elapsed=0
-start_time=$(date +%s)
 
 flag_run_status=1
-while [[ ${time_elapsed} -le $max_seconds ]]; do
+
+cnt=0
+while [[ $cnt -le 30 ]]; do
 
   flag_run_status=`grep "${str_model_run_status}" ${fn_mirror} >/dev/null; echo $?`
 
-    time_elapsed=$(($(date +%s) - $start_time))
+    time_elapsed=$(( ${cnt} * ${time_sleep_s} ))
 
     echo "Elapsed time (sec) =  ${time_elapsed} "
     echo "flag_run_status=${flag_run_status} (0:suceecess)"; echo
@@ -71,6 +69,7 @@ while [[ ${time_elapsed} -le $max_seconds ]]; do
     else
         echo "Wait for ${time_sleep_s} more seconds"; echo
         sleep ${time_sleep_s}    # 10min=600s
+	cnt=$(( ${cnt} + 1 ))
     fi
 done
 
@@ -234,7 +233,7 @@ if [[ ${flag_run_status} == 0 ]]; then
 
 
   echo
-  echo $msg at `date`
+  echo $msg 
   echo
 
 

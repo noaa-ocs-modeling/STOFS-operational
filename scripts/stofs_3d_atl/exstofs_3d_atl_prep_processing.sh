@@ -290,7 +290,7 @@ else   # COLDSTART=NO
 
   cnt_files=0
   for k in ${days[@]}; do
-      date_k=`date -d "${PDYHH_NCAST_BEGIN:0:8} ${k} days ago" +%Y%m%d`
+      date_k=$(finddate.sh ${PDYHH_NCAST_BEGIN} d-${k})
 
       fn_hotstart_oper=$COMINstofs/${RUN}.${date_k}/${RUN}.${cycle}.hotstart.stofs3d.nc
 
@@ -334,7 +334,7 @@ postmsg "$jlogfile" "$msg"
 
 
 echo 
-echo " Finished running - exstofs_3d_atl_prep_processing.sh at " `date`
+echo " Finished running - exstofs_3d_atl_prep_processing.sh" 
 echo
  
 
