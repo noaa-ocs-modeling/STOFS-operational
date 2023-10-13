@@ -1,0 +1,103 @@
+#!/bin/bash
+
+
+#############################
+# Preliminary data setup step
+#############################
+export PS4=' $SECONDS + '
+set -x
+
+date 
+
+##########################
+# Specify NET and RUN name
+##########################
+export NET=${NET:-stofs}
+export RUN=${RUN:-stofs_3d_atl}
+
+##########################################################
+# obtain unique process id (pid) and make temp directories
+##########################################################
+export DATA=${DATA:-${DATAROOT}/stofs_3d_atl_run_${cyc}_${envir}_${stofs_ver}}
+
+mkdir $DATA
+cd $DATA
+
+export cycle=t${cyc}z
+
+##################
+# File To Log Msgs
+##################
+export jlogfile=${jlogfile:-${DATA}/jlogfile.${jobid}}
+
+#####################################
+# Determine Job Output Name on System
+#####################################
+export pgmout="OUTPUT.$$"
+
+##############################################
+# SENDECF  - Flag Events on ECF
+# SENDCOM  - Copy Files From TMPDIR to $COMOUT
+# SENDDBN  - Issue DBNet Client Calls
+##############################################
+
+export SENDCOM=${SENDCOM:-YES}
+export SENDECF=${SENDECF:-NO}
+export SENDDBN=${SENDDBN:-NO}
+export SENDDBN_NTC=${SENDDBN_NTC:-NO}
+
+
+# pre-requisite for setpdy.sh: existed $DATA!
+setpdy.sh
+. ./PDY
+
+export PDYHH=${PDY}$cyc
+export PDYHH_FCAST_BEGIN=$PDYHH
+export PDYHH_FCAST_END=$($NDATE 72 $PDYHH)
+export PDYHH_NCAST_BEGIN=$($NDATE -24 $PDYHH)
+
+#################################################
+# Execution directory structure
+# If dev, run config file to get input parameters
+#################################################
+
+export JOBstofs3d=${JOBstofs3d:-$HOMEstofs/jobs/${RUN}}
+export EXECstofs3d=${EXECstofs3d:-$HOMEstofs/exec/${RUN}}
+export FIXstofs3d=${FIXstofs3d:-$HOMEstofs/fix/${RUN}}
+export PARMstofs3d=${PARMstofs3d:-$HOMEstofs/parm/${RUN}}
+export SORCstofs3d=${SORCstofs3d:-$HOMEstofs/sorc/${RUN}}
+export SCRIstofs3d=${SCRIstofs3d:-$HOMEstofs/scripts/${RUN}}
+export USHstofs3d=${USHstofs3d:-$HOMEstofs/ush/${RUN}}
+export ECFstofs3d=${ECFstofs3d:-$HOMEstofs/ecf/${RUN}}
+
+export PYstofs3d=${PYstofs3d:-$USHstofs3d/pysh}
+
+###############################################
+# Define input and output com directories
+###############################################
+export COMIN=${COMIN:-$(compath.py ${envir}/${NET}/${stofs_ver})/${RUN}.${PDY}}
+export COMOUT=${COMOUT:-$(compath.py -o ${NET}/${stofs_ver})/${RUN}.${PDY}}
+export COMOUTrerun=${COMOUTrerun:-$(compath.py -o ${NET}/${stofs_ver})/${RUN}.${PDY}/rerun}
+export COMOUT_PREV=${COMOUT_PREV:-$(compath.py ${envir}/${NET}/${stofs_ver})/${RUN}.${PDYm1}}
+
+mkdir -p $COMOUT $COMOUTrerun
+
+#####################################################
+# Execute script: 
+  
+ ${SCRIstofs3d}/exstofs_3d_atl_post_1.sh
+#####################################################
+
+if [ -f $pgmout ]; then
+    cat $pgmout
+fi
+
+postmsg $jlogfile "$0 completed normally"
+
+export KEEPDATA=YES
+
+if [ "${KEEPDATA}" != YES ]; then
+	rm  -rf $DATA
+fi
+
+date
