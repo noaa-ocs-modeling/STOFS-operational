@@ -290,7 +290,7 @@ else   # COLDSTART=NO
 
   cnt_files=0
   for k in ${days[@]}; do
-      date_k=$(finddate.sh ${PDYHH_NCAST_BEGIN} d-${k})
+      date_k=$(finddate.sh ${PDYHH_NCAST_BEGIN:0:8} d-${k})
 
       fn_hotstart_oper=$COMINstofs/${RUN}.${date_k}/${RUN}.${cycle}.hotstart.stofs3d.nc
 
