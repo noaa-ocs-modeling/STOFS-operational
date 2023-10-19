@@ -50,7 +50,7 @@ echo 'The script stofs_3d_atl_create_river_st_lawrence.sh  started at UTC'
    str_yyyy_mm_dd_hr=${PDYHH_NCAST_BEGIN:0:4}-${PDYHH_NCAST_BEGIN:4:2}-${PDYHH_NCAST_BEGIN:6:2}-${cyc}
    
    #str_yyyy_mm_dd_hr_prev=`date -d "${PDYHH_NCAST_BEGIN:0:8} 1 days ago" +%Y-%m-%d`-${cyc} 
-   PDYHH_NCAST_BEGIN_1day_ago=$(finddate.sh ${PDYHH_NCAST_BEGIN} d-1)
+   PDYHH_NCAST_BEGIN_1day_ago=$(finddate.sh ${PDYHH_NCAST_BEGIN:0:8} d-1)
    str_yyyy_mm_dd_hr_prev=${PDYHH_NCAST_BEGIN_1day_ago:0:4}-${PDYHH_NCAST_BEGIN_1day_ago:4:2}-${PDYHH_NCAST_BEGIN_1day_ago:6:2}-${cyc}
 
 
