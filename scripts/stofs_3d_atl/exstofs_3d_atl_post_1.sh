@@ -88,7 +88,7 @@ if [[ ${flag_run_status} == 0 ]]; then
     cd ${DATA}
     if [  ! -s done_cp_nc ]; then
         mkdir -p Dir_backup_2d3d
-        cpreq -fpa  outputs/{horizontalVelX,horizontalVelY,out2d,salinity,temperature,zCoordinates}*.nc Dir_backup_2d3d
+        cpreq -fpa  outputs/out2d*.nc Dir_backup_2d3d
 
     fi
 
