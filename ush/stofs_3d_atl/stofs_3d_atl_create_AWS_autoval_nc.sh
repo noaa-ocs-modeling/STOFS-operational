@@ -141,6 +141,11 @@ cp -pf tmp_attr.nc ${fn_fnl_zeta_max}
         if [ $err -eq 0 ]; then
            cp -pf ${DATA}/outputs/${fn_fnl_zeta_max}  ${COMOUT}/${fn_fnl_zeta_max}
 
+           if [ $SENDDBN = YES ]; then
+            $DBNROOT/bin/dbn_alert MODEL STOFS_NETCDF $job ${COMOUT}/${fn_fnl_zeta_max}
+            export err=$?; err_chk
+           fi
+
         else
            mstofs="Creation/Archiving of ${DATA}/outputs/${fn_fnl_zeta_max} failed"
            echo $msg; echo $msg >> $pgmout

@@ -108,7 +108,11 @@
         if [ $err -eq 0 ]; then
 
            cpreq -pf ${dir_work_shef}/${fn_py_out_nc_6min} ${COMOUT}/${fn_sta_cwl_t_s_vel_nfcast_std}
-           
+
+           if [ $SENDDBN = YES ]; then
+             $DBNROOT/bin/dbn_alert MODEL STOFS_NETCDF $job ${COMOUT}/${fn_sta_cwl_t_s_vel_nfcast_std}
+           fi
+
 	   # for AWS autoval
 	   f_out_point_autoval=${RUN}.${cycle}.points.cwl.nc
            cpreq -pf ${dir_work_shef}/${fn_py_out_nc_6min} ${COMOUT}/${f_out_point_autoval}
@@ -187,14 +191,27 @@ export err=$?; #err_chk
 
     if [ $err -eq 0 ]; then
       cp -pf ${fn_shef_merged} ${COMOUT}
-      
-      mkdir -p ${COMOUT}/wmo
-      cp -pf ${fn_awips_shef} ${COMOUT}/wmo
-      
+
       msg="Creation/Archiving of ${fn_shef_merged} was successfully created"
       echo $msg; echo $msg >> $pgmout
 
-      else
+      if [ $SENDDBN = YES ]; then
+        $DBNROOT/bin/dbn_alert MODEL STOFS_SHEF  $job ${COMOUT}/${fn_shef_merged} 
+        export err=$?; err_chk
+      fi
+        
+      mkdir -p ${COMOUT}/wmo
+      cp -pf ${fn_awips_shef} ${COMOUT}/wmo
+      
+      msg="Creation/Archiving of ${fn_awips_shef} was successfully created"
+      echo $msg; echo $msg >> $pgmout
+
+      if [ $SENDDBN = YES ]; then
+        $DBNROOT/bin/dbn_alert MODEL STOFS_WMO $job ${COMOUT}/${fn_awips_shef}
+        export err=$?; err_chk
+      fi
+ 
+    else
         mstofs="Creation/Archiving of ${dir_output}/${fn_shef_merged} failed"
         echo $msg; echo $msg >> $pgmout
     fi

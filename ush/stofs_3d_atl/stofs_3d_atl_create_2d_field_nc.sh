@@ -101,14 +101,19 @@
            #cpreq -pf ${fn_out_py}  ${COMOUT}/${fn_2d_field_date_tag}
 
            msg="Done cp: fn_out_py = ${fn_out_py}"$'\n'; 
-	   echo $msg; echo;
-           echo $msg >> $pgmout
+	   echo -e $msg; echo;
+           echo -e $msg >> $pgmout
+
+         if [ $SENDDBN = YES ]; then
+            $DBNROOT/bin/dbn_alert MODEL STOFS_NETCDF $job ${COMOUT}/${fn_2d_field_std}
+            export err=$?; err_chk
+          fi
 
       else
 	   msg="Not existed: ${fn_out_py}"$'\n'   
            msg=${msg}"Creation/Archiving of results/${fn_2d_field_std} failed"
-           echo $msg; echo;
-	   echo $msg >> $pgmout
+           echo -e $msg; echo;
+	   echo -e $msg >> $pgmout
       fi
 
 

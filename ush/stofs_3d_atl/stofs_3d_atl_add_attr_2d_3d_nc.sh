@@ -167,7 +167,13 @@ done
 
             if [ $sz_fn_link_src -ge ${file_size_cr} ]; then
                cpreq -pf ${fn_k_src} ${COMOUT}/${fn_k_std}
-            fi
+            
+	       if [ $SENDDBN = YES ] && [ ${var_k} = out2d ]; then
+                 $DBNROOT/bin/dbn_alert MODEL STOFS_NETCDF $job ${COMOUT}/${fn_k_std}
+                 export err=$?; err_chk
+               fi 
+	    
+	    fi
 
             echo "${fn_k_std} is created"         
 

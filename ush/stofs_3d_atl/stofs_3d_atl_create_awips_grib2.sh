@@ -148,12 +148,30 @@
            mkdir -p ${COMOUT}/wmo	   
            cp -pf grib2_${RUN}.${cycle}.*.${type} ${COMOUT}/wmo
 
-           echo "right after cp grib2_xxx.cwl to COM"
-           ls grib2_${RUN}.${cycle}.*.${type}
-
-
-           msg="Creation/Archiving of AWIPS grib2 files was successfully created/archived"
+           msg="Creation/Archiving of AWIPS grib2 and wmo files was successfully created/archived"
            echo $msg; echo $msg >> $pgmout
+
+
+           if [ $SENDDBN = YES ]; then
+             list_conus=`ls ${RUN}.${cycle}.conus.east.f???.grib2`
+             for fn_grb in ${list_conus}; do
+                $DBNROOT/bin/dbn_alert MODEL STOFS_GB2 $job ${COMOUT}/${fn_grb}
+                 export err=$?; err_chk
+             done
+  
+             list_puer=`ls ${RUN}.${cycle}.puertori.f???.grib2`
+             for fn_grb in ${list_puer}; do
+                $DBNROOT/bin/dbn_alert MODEL STOFS_GB2 $job ${COMOUT}/${fn_grb}
+                 export err=$?; err_chk
+             done
+  
+             $DBNROOT/bin/dbn_alert MODEL STOFS_GB2 $job ${COMOUT}/${RUN}.${cycle}.conus.east.cwl.grib2
+             export err=$?; err_chk
+  
+             $DBNROOT/bin/dbn_alert MODEL STOFS_GB2 $job ${COMOUT}/${RUN}.${cycle}.puertori.cwl.grib2
+             export err=$?; err_chk
+    
+           fi
 
         else
            mstofs="Creation/Archiving of AWIPS grib2 files  failed"
