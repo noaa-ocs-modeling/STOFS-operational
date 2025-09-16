@@ -27,7 +27,7 @@
 
   msg="Starting stofs_2d_glo_prep_nowcast scripts"
   echo "$msg"
-  postmsg "$jlogfile" "$msg"
+  postmsg  "$msg"
 
   spinh=162
   wndh=3
@@ -126,7 +126,7 @@
   nout=-5
   touts=$(echo "scale=5; $rnday-($nowh+$lsth)/24" | bc)
   toutf=$rnday
-  nhstar=5
+  nhstar=3
   nhsinc=1800
   time_ncst=$(echo "scale=0; $ncstd*86400" | bc)
   hotstart=0
@@ -176,32 +176,33 @@
   fi
 
 # --------------------------------------------------------------------------- #
-# 5.  Execute stofs_2d_glo_adcprep for tide-only nowcast
+# 5.  Executes adcprep for tide-only nowcast
 
-  export pgm="stofs_2d_glo_adcprep for tide-only nowcast"
+  export pgm="adcprep for tide-only nowcast"
   . prep_step
   startmsg
   if [ ! -s ${RUN}_${ncpu}.tar.gz ]; then
-     mpiexec -n 1 -ppn 1 $EXECstofs/${RUN}_adcprep --np $ncpu --partmesh >> $pgmout 2>errfile
+     mpiexec -n 1 -ppn 1 adcprep --np $ncpu --partmesh >> $pgmout 2>errfile
      export err=$?; err_chk
-     mpiexec -n 1 -ppn 1 $EXECstofs/${RUN}_adcprep --np $ncpu --prepall >> $pgmout 2>errfile
+     mpiexec -n 1 -ppn 1 adcprep --np $ncpu --prepall >> $pgmout 2>errfile
      export err=$?; err_chk
      filelist="partmesh.txt PE*/fort.14 PE*/fort.18 PE*/fort.13 PE*/fort.24 PE*/elev_stat.151 PE*/vel_stat.151"
      tar cvzf ${RUN}_${ncpu}.tar.gz $filelist
      export err=$?; err_chk
      cpfs ${RUN}_${ncpu}.tar.gz $COMGES/.
   else
-     mpiexec -n 1 -ppn 1 $EXECstofs/${RUN}_adcprep --np $ncpu --prep15 >> $pgmout 2>errfile
+     mpiexec -n 1 -ppn 1 adcprep --np $ncpu --prep15 >> $pgmout 2>errfile
      export err=$?; err_chk
   fi
 
 # --------------------------------------------------------------------------- #
-# 6.  Execute stofs_2d_glo_padcirc for tide-only nowcast
+# 6.  Execute padcirc for tide-only nowcast
 
-  export pgm="stofs_2d_glo_padcirc for tide-only nowcast"
+  export pgm="padcirc for tide-only nowcast"
   . prep_step
   startmsg
-  mpiexec -n $ncpu -ppn 127 --cpu-bind core $EXECstofs/${RUN}_padcirc >> $pgmout 2>adcirc.err
+  #mpiexec -n $ncpu -ppn 127 --cpu-bind core padcirc >> $pgmout 2>adcirc.err
+  mpiexec -n $ncpu -ppn ${PPN} --cpu-bind core padcirc >> $pgmout 2>adcirc.err
   export err=$?; err_chk
   if [[ -n $(grep 'ADCIRC stopping' adcirc.err) || -n $(grep 'ADCIRC Terminating' adcirc.err) ]]; then
      echo "FATAL ERROR: ADCIRC_RUN crashed and terminated"
@@ -229,6 +230,6 @@
 
   msg="Completing stofs_2d_glo_prep_nowcast script"
   echo "$msg"
-  postmsg "$jlogfile" "$msg"
+  postmsg  "$msg"
 
 # End of stofs_2d_glo_prep_nowcast.sh.ecf script ---------------------------- #

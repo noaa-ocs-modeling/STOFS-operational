@@ -27,9 +27,9 @@
   setoff='+xa'
   set $seton
 
-  msg="Starting stofs_2d_glo_cold_adcprep scripts"
+  msg="Starting adcprep scripts"
   echo "$msg"
-  postmsg "$jlogfile" "$msg"
+  postmsg  "$msg"
 
   spinh=162
   wndh=3
@@ -65,7 +65,7 @@
   fi
 
 # --------------------------------------------------------------------------- #
-# 3.  Run the stofs_2d_glo_adcprep
+# 3.  Run the adcprep
 # 3.a Copy stofs_2d_glo partmesh, grid, and template files
 
   ln -s $FIXstofs/${RUN}_attr fort.13
@@ -101,7 +101,7 @@
   nout=-5
   touts=0.00000
   toutf=$rnday
-  nhstar=5
+  nhstar=3
   nhsinc=1800
   time_hotstart=$(echo "$rnday*86400" | bc)
 
@@ -148,17 +148,17 @@
   fi
           
 # --------------------------------------------------------------------------- #
-# 4.  Execute stofs_2d_glo_adcprep 
+# 4.  Execute adcprep 
 
-  export pgm="stofs_2d_glo_adcprep with partmesh"
+  export pgm="adcprep with partmesh"
   . prep_step
   startmsg
-  mpiexec -n 1 -ppn 1 $EXECstofs/${RUN}_adcprep --np $ncpu --partmesh >> $pgmout 2>errfile
+  mpiexec -n 1 -ppn 1 adcprep --np $ncpu --partmesh >> $pgmout 2>errfile
   export err=$?; err_chk
-  export pgm="stofs_2d_glo_adcprep with prepall"
+  export pgm="adcprep with prepall"
   . prep_step
   startmsg
-  mpiexec -n 1 -ppn 1 $EXECstofs/${RUN}_adcprep --np $ncpu --prepall >> $pgmout 2>errfile
+  mpiexec -n 1 -ppn 1 adcprep --np $ncpu --prepall >> $pgmout 2>errfile
   export err=$?; err_chk
   filelist="partmesh.txt PE*/fort.14 PE*/fort.18 PE*/fort.13 PE*/fort.24 PE*/elev_stat.151 PE*/vel_stat.151"
   tar cvzf ${RUN}_${ncpu}.tar.gz $filelist
@@ -172,6 +172,6 @@
   
   msg="Completing stofs_2d_glo_cold_adcprep script"
   echo "$msg"
-  postmsg "$jlogfile" "$msg"
+  postmsg  "$msg"
 
 # End of stofs_2d_glo_cold_adcprep.ecf script ------------------------------- #

@@ -27,7 +27,7 @@
 
   msg="Starting stofs_2d_glo_post_ncdiff script"
   echo "$msg"
-  postmsg "$jlogfile" "$msg"
+  postmsg  "$msg"
 
   wndh=3
   nowh=6
@@ -91,6 +91,6 @@
 
   msg="Completing stofs_2d_glo_post_ncdiff script"
   echo "$msg"
-  postmsg "$jlogfile" "$msg"
+  postmsg  "$msg"
 
 # End of exstofs_2d_glo_post_ncdiff.sh.ecf script --------------------------- #

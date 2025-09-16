@@ -20,7 +20,7 @@
 
   msg="Starting stofs_2d_glo_fcst_gfs scripts"
   echo "$msg"
-  postmsg "$jlogfile" "$msg"
+  postmsg  "$msg"
 
   spinh=162
   wndh=3
@@ -129,6 +129,6 @@ date
 date
   msg="Completing stofs_2d_glo_fcst_gfs script"
   echo "$msg"
-  postmsg "$jlogfile" "$msg"
+  postmsg  "$msg"
 
 # End of stofs_2d_glo_fcst_gfs.sh script ------------------------------------ #

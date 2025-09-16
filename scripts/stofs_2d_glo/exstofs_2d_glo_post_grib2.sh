@@ -27,7 +27,7 @@
 
   msg="Starting stofs_2d_glo_post_grib2 script"
   echo "$msg"
-  postmsg "$jlogfile" "$msg"
+  postmsg  "$msg"
 
   wndh=3
   nowh=6
@@ -77,17 +77,17 @@
       $EXECstofs/${RUN}_netcdf2shef con $type $YMDH ${type}.fort.61.nc $FIXstofs/${RUN}_msl2mllw >> $pgmout 2>errfile
       export err=$?; err_chk
 #      pac_exclude_list="137 140 145 151 153 157 158 162 178" there are no NWS ID
-#      for sta in $(seq -f "%03g" 1 136) 138 139 $(seq 141 144) $(seq 146 150) 152; do ! Include Pacific stations for the future upgrade
-      for sta in $(seq -f "%03g" 1 128); do
+      for sta in $(seq -f "%03g" 1 136) 138 139 $(seq 141 144) $(seq 146 150) 152; do # Include Pacific stations for the future upgrade
+#      for sta in $(seq -f "%03g" 1 128); do
           cat fort.5${sta} >> ${RUN}.${cycle}.points.${type}.shef
       done
-#      for sta in $(seq 154 156) $(seq 159 161) $(seq 163 177) $(seq 179 208) $(seq 225 229); do ! Include Pacific stations for the future upgrade
-      for sta in $(seq 225 229); do
+      for sta in $(seq 154 156) $(seq 159 161) $(seq 163 177) $(seq 179 208) $(seq 225 229); do # Include Pacific stations for the future upgrade
+#      for sta in $(seq 225 229); do
           cat fort.5${sta} >> ${RUN}.${cycle}.points.${type}.shef
       done
-#      for sta in $(seq 559 834); do ! Include additonal NWS ID stations for the future upgrade
-#          cat fort.5${sta} >> ${RUN}.${cycle}.points.${type}.shef
-#      done
+      for sta in $(seq 559 834); do # Include additonal NWS ID stations for the future upgrade
+          cat fort.5${sta} >> ${RUN}.${cycle}.points.${type}.shef
+      done
       rm fort.5*
   done
   
@@ -262,6 +262,6 @@
 
   msg="Completing stofs_2d_glo_post_grib2 script"
   echo "$msg"
-  postmsg "$jlogfile" "$msg"
+  postmsg  "$msg"
 
 # End of exstofs_2d_glo_post_grib2.sh.ecf script ---------------------------- #

@@ -13,7 +13,7 @@ echo "         Apr 2012 - Modified version for stofs grids only"
 set -xa
 msg="Starting stofs_2d_glo_gempak script"
 echo "$msg"
-postmsg "$jlogfile" "$msg"
+postmsg  "$msg"
 
 export 'PS4=gempak_${domain}:$SECONDS + '
 
@@ -33,7 +33,7 @@ cpreq $GEMfix/${RUN}_g2varsncep1.tbl g2varsncep1.tbl
 cpreq $GEMfix/${RUN}_g2vcrdwmo3.tbl g2vcrdwmo3.tbl
 
 msg="Begin job for $jobid"
-postmsg "$jlogfile" "$msg"
+postmsg  "$msg"
 
 yymmdd=`echo $PDY | cut -c 3-8`
 #
@@ -181,6 +181,6 @@ set -x
 
 msg="Completing STOFS gempak script"
 echo "$msg"
-postmsg "$jlogfile" "$msg"
+postmsg  "$msg"
 
 ############################### END OF SCRIPT #######################

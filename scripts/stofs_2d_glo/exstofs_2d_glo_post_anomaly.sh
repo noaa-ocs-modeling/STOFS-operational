@@ -21,7 +21,7 @@
 
   msg="Starting stofs_2d_glo_post_anomaly script"
   echo "$msg"
-  postmsg "$jlogfile" "$msg"
+  postmsg  "$msg"
 
   wndh=3
   nowh=6
@@ -58,7 +58,9 @@
   if [ -f $COMIN/${RUN}.${cycle}.points.cwl.nc ]; then
      cpreq $COMIN/${RUN}.${cycle}.points.cwl.nc cwl.fort.61.nc
      cpreq $COMIN/${RUN}.${cycle}.points.htp.nc htp.fort.61.nc
+     cpreq $COMIN/${RUN}.${cycle}.fields.cwl.nc cwl.fort.63.nc
   fi
+
 
   ncdump -f f cwl.fort.61.nc > tmp.cdl
   export err=$?; err_chk
@@ -119,11 +121,11 @@
 	  fi
   done < $DATA/data/${RUN}_station.ctl
   
-  mpiexec -n 1 -ppn 1 $USHstofs/etweb_database.tcl >> $pgmout 2>errfile
+  mpiexec -n 1 -ppn 1 python $USHstofs/etweb_database.py >> $pgmout 2>errfile
   export err=$?; err_chk
 
   extract_now=$(echo ${extract_month}/${extract_day}/${extract_year} ${cyc}:00:00)
-  mpiexec -n 1 -ppn 1 $USHstofs/etweb_extract.tcl --all --date ${extract_now} >> $pgmout 2>errfile
+  mpiexec -n 1 -ppn 1 python $USHstofs/etweb_extract.py --all --date "${extract_now}" >> $pgmout 2>errfile
   export err=$?; err_chk
 
   rm $DATA/database/*.csv
@@ -140,7 +142,7 @@
 	mkdir $DATA/tmp 
   fi
 
-  extract_date=$(echo ${extract_year2}${extract_month}${extract_day}${cyc})
+  extract_date=$(echo ${extract_year2}${extract_month}${extract_day})
   while read line; do
         abbr=$(echo $line | awk '{print $1}')
         if [ -f $DATA/msl/plots/${abbr}_${extract_date}.anom ]; then
@@ -209,6 +211,6 @@
 
   msg="Completing stofs_2d_glo_post_anomaly script"
   echo "$msg"
-  postmsg "$jlogfile" "$msg"
+  postmsg  "$msg"
 
 # End of exstofs_2d_glo_post_anomly.sh.ecf script -------------------------- #

@@ -27,7 +27,7 @@
 
   msg="Starting stofs_2d_glo_fcst_forecast scripts"
   echo "$msg"
-  postmsg "$jlogfile" "$msg"
+  postmsg  "$msg"
 
   spinh=162
   wndh=3
@@ -65,11 +65,9 @@
   cpreq $COMOUTrerun/${RUN}_fcst.62.nc 		fort.62.nc
   cpreq $COMOUTrerun/${RUN}_fcst.63.nc 		fort.63.nc
   cpreq $COMOUTrerun/${RUN}_fcst.64.nc 		fort.64.nc
-  if [ -f $COMOUTrerun/${RUN}_maxele.63.nc ]; then
-     cpreq $COMOUTrerun/${RUN}_maxele.63.nc 	maxele.63.nc
-     cpreq $COMOUTrerun/${RUN}_maxvel.63.nc 	maxvel.63.nc
-     cpreq $COMOUTrerun/${RUN}_maxwvel.63.nc 	maxwvel.63.nc
-  fi
+  cpreq $COMOUTrerun/${RUN}_maxele.63.nc 	maxele.63.nc
+  cpreq $COMOUTrerun/${RUN}_maxvel.63.nc 	maxvel.63.nc
+  cpreq $COMOUTrerun/${RUN}_maxwvel.63.nc 	maxwvel.63.nc
 
 # --------------------------------------------------------------------------- #
 # 3.  Copy stofs_2d_glo partmesh, grid, and template files 
@@ -180,7 +178,7 @@
      fcstd=$(echo "scale=5; $time_restart/86400" | bc)
      rnday_restart=$(echo "scale=5; $fcstd+$lsth/72" | bc)
      nout=5
-     nhstar=5
+     nhstar=3
      nhsinc=3600
      time_fcst=$(echo "scale=5; $rnday_restart*86400" | bc)
      restart=$(($restart+1))
@@ -231,32 +229,39 @@
      fi
 
 # --------------------------------------------------------------------------- #
-# 5.  Execute stofs_2d_glo_adcprep for surface forcing forecast 
+# 5.  Execute adcprep for surface forcing forecast 
 
-     export pgm="stofs_2d_glo_adcprep for surface forcing forecast${restart}"
+     export pgm="adcprep for surface forcing forecast${restart}"
      . prep_step
      startmsg
      if [ ! -s ${RUN}_${ncpu}.tar.gz ]; then
-        mpiexec -n 1 -ppn 1 $EXECstofs/${RUN}_adcprep --np $ncpu --partmesh >> $pgmout 2>errfile
+        mpiexec -n 1 -ppn 1 adcprep --np $ncpu --partmesh >> $pgmout 2>errfile
         export err=$?; err_chk
-        mpiexec -n 1 -ppn 1 $EXECstofs/${RUN}_adcprep --np $ncpu --prepall >> $pgmout 2>errfile
+        mpiexec -n 1 -ppn 1 adcprep --np $ncpu --prepall >> $pgmout 2>errfile
         export err=$?; err_chk
         filelist="partmesh.txt PE*/fort.14 PE*/fort.18 PE*/fort.13 PE*/fort.24 PE*/elev_stat.151 PE*/vel_stat.151"
         tar cvzf ${RUN}_${ncpu}.tar.gz $filelist
         export err=$?; err_chk
         cpfs ${RUN}_${ncpu}.tar.gz $COMGES/.
      else
-        mpiexec -n 1 -ppn 1 $EXECstofs/${RUN}_adcprep --np $ncpu --prep15 >> $pgmout 2>errfile
+        mpiexec -n 1 -ppn 1 adcprep --np $ncpu --prep15 >> $pgmout 2>errfile
         export err=$?; err_chk
      fi
 
 # --------------------------------------------------------------------------- #
-# 6.  Execute stofs_2d_glo_padcirc for surface frocing forecast 
+# 6.  Execute padcirc for surface frocing forecast 
 
-     export pgm="stofs_2d_glo_padcirc for surface frocing forecast${restart}"
+     export pgm="padcirc for surface forcing forecast${restart}"
      . prep_step
      startmsg
-     mpiexec -n $ncpu -ppn 127 --cpu-bind core $EXECstofs/${RUN}_padcirc >> $pgmout 2>adcirc.err
+     #mpiexec -n $ncpu -ppn 127 --cpu-bind core padcirc >> $pgmout 2>adcirc.err
+     if [ $restart -lt 3 ]; then
+         # Dedicate ${NUM_WRITERS} MPI processes to writing fort.63, fort.54, fort.73 and fort.74
+         mpiexec -n ${TOT_NCPU} -ppn ${PPN} --cpu-bind core padcirc -W ${NUM_WRITERS} >> $pgmout 2>adcirc.err
+     else
+         # using -W {NUM_WRITERS} crashes for 3rd call (restart=3 here), so defaulting to original configuration
+         mpiexec -n $ncpu -ppn ${PPN} --cpu-bind core padcirc >> $pgmout 2>adcirc.err
+     fi
      export err=$?; err_chk
      if [[ -n $(grep 'ADCIRC stopping' adcirc.err) || -n $(grep 'ADCIRC Terminating' adcirc.err) ]]; then
         echo "FATAL ERROR: ADCIRC_RUN crashed and terminated"
@@ -315,6 +320,6 @@
 
   msg="Completing stofs_2d_glo_fcst_forecast script"
   echo "$msg"
-  postmsg "$jlogfile" "$msg"
+  postmsg  "$msg"
 
 # End of stofs_2d_glo_fcst_forecast.sh.ecf script ----------------------------- #
