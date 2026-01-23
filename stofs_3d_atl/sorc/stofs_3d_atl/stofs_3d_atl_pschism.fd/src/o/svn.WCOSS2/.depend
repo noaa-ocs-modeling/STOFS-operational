@@ -1,0 +1,30 @@
+# DO NOT DELETE THIS LINE - used by make depend
+o/svn.WCOSS2/hydraulic_structures.o: o/svn.WCOSS2/schism_glbl.mod o/svn.WCOSS2/schism_msgp.mod
+o/svn.WCOSS2/misc_modules.o: o/svn.WCOSS2/schism_glbl.mod o/svn.WCOSS2/schism_msgp.mod
+o/svn.WCOSS2/schism_io.o: o/svn.WCOSS2/schism_glbl.mod o/svn.WCOSS2/schism_msgp.mod
+o/svn.WCOSS2/schism_msgp.o: o/svn.WCOSS2/schism_glbl.mod
+o/svn.WCOSS2/scribe_io.o: o/svn.WCOSS2/schism_glbl.mod o/svn.WCOSS2/schism_msgp.mod
+o/svn.WCOSS2/schism_driver.o: o/svn.WCOSS2/schism_msgp.mod o/svn.WCOSS2/scribe_io.mod
+o/svn.WCOSS2/bktrk_subs.o: o/svn.WCOSS2/hydraulic_structures.mod o/svn.WCOSS2/schism_glbl.mod o/svn.WCOSS2/schism_msgp.mod
+o/svn.WCOSS2/grid_subs.o: o/svn.WCOSS2/schism_glbl.mod o/svn.WCOSS2/schism_io.mod o/svn.WCOSS2/schism_msgp.mod
+o/svn.WCOSS2/misc_subs.o: o/svn.WCOSS2/hydraulic_structures.mod o/svn.WCOSS2/schism_glbl.mod o/svn.WCOSS2/schism_io.mod
+o/svn.WCOSS2/misc_subs.o: o/svn.WCOSS2/schism_msgp.mod
+o/svn.WCOSS2/schism_finalize.o: o/svn.WCOSS2/hydraulic_structures.mod
+o/svn.WCOSS2/schism_finalize.o: o/svn.WCOSS2/schism_glbl.mod o/svn.WCOSS2/schism_io.mod
+o/svn.WCOSS2/schism_finalize.o: o/svn.WCOSS2/schism_msgp.mod
+o/svn.WCOSS2/schism_init.o: o/svn.WCOSS2/hydraulic_structures.mod
+o/svn.WCOSS2/schism_init.o: o/svn.WCOSS2/misc_modules.mod
+o/svn.WCOSS2/schism_init.o: o/svn.WCOSS2/schism_glbl.mod o/svn.WCOSS2/schism_io.mod o/svn.WCOSS2/schism_msgp.mod
+o/svn.WCOSS2/schism_step.o: o/svn.WCOSS2/hydraulic_structures.mod
+o/svn.WCOSS2/schism_step.o: o/svn.WCOSS2/misc_modules.mod
+o/svn.WCOSS2/schism_step.o: o/svn.WCOSS2/schism_glbl.mod o/svn.WCOSS2/schism_io.mod o/svn.WCOSS2/schism_msgp.mod
+o/svn.WCOSS2/sflux_9c.o: o/svn.WCOSS2/schism_glbl.mod o/svn.WCOSS2/schism_msgp.mod
+o/svn.WCOSS2/solver_subs.o: o/svn.WCOSS2/schism_glbl.mod o/svn.WCOSS2/schism_msgp.mod
+o/svn.WCOSS2/transport_TVD_imp.o: o/svn.WCOSS2/misc_modules.mod o/svn.WCOSS2/schism_glbl.mod o/svn.WCOSS2/schism_msgp.mod
+o/svn.WCOSS2/hydraulic_structures.mod: o/svn.WCOSS2/hydraulic_structures.o
+o/svn.WCOSS2/misc_modules.mod: o/svn.WCOSS2/misc_modules.o
+o/svn.WCOSS2/netcdf_io.mod: o/svn.WCOSS2/sflux_9c.o
+o/svn.WCOSS2/schism_glbl.mod: o/svn.WCOSS2/schism_glbl.o
+o/svn.WCOSS2/schism_io.mod: o/svn.WCOSS2/schism_io.o
+o/svn.WCOSS2/schism_msgp.mod: o/svn.WCOSS2/schism_msgp.o
+o/svn.WCOSS2/scribe_io.mod: o/svn.WCOSS2/scribe_io.o

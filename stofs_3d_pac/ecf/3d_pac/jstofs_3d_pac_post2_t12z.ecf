@@ -1,0 +1,113 @@
+#!/bin/bash
+
+#PBS  -N vnco-p2_post2_t12z
+#PBS  -A ESTOFS-DEV
+#PBS  -q dev
+#PBS  -j oe
+#PBS  -S /bin/bash
+
+#(Not work: Not Running: Insufficient amount of resource: prepost) PBS  -l place=vscatter:excl,select=1:ncpus=12:mpiprocs=12:prepost=true:mem=1024GB
+
+# #PBS  -l place=vscatter:excl,select=1:ncpus=12:mpiprocs=12:prepost=true:mem=80GB
+# # slow for geopkg, in/after spliting PBS  -l place=vscatter:excl,select=1:ncpus=12:mpiprocs=12
+
+# works #PBS  -l place=vscatter:excl,select=1:ncpus=15:mpiprocs=15
+
+## off on 2024/01/19) #PBS  -l place=vscatter:excl,select=1:ncpus=25:mpiprocs=25
+
+#{before Fei suggestion:  
+##PBS  -l place=vscatter:excl,select=30:ncpus=1:mpiprocs=1:ompthreads=1
+
+
+
+## zy (2024/2/5)
+## fyi, to pair with the below, script-post2: mpmd: hotstart+geopkg uses nproc=121
+# Not wk: #PBS  -l place=vscatter:excl,select=150:ncpus=1:mpiprocs=1
+
+# too slow: (2024/02/06) #PBS  -l place=vscatter:excl,select=20:ncpus=120:mpiprocs=120
+#   #PBS  -l place=vscatter:excl,select=20:ncpus=12:mpiprocs=12
+
+
+
+##### (2024/11/14) #PBS  -l place=vscatter:excl,select=1:ncpus=120:mpiprocs=120
+#PBS  -l place=vscatter:excl,select=1:ncpus=120:mpiprocs=120:mem=500GB
+
+# PBS  -l place=vscatter:excl,select=15:ncpus=120:mpiprocs=120
+# #PBS  -l place=vscatter:excl,select=10:ncpus=120:mpiprocs=120
+# #PBS  -l place=vscatter:excl,select=1:ncpus=120:mpiprocs=120
+# #PBS  -l place=vscatter:excl,select=1:ncpus=12:mpiprocs=12
+
+## following: geopkg each file has 12 time steps
+## Not work (2024/2/2): PBS  -l place=vscatter:excl,select=30:ncpus=12:mpiprocs=12
+# Fei}
+## Not wk: PBS  -l place=vscatter:excl,select=12:ncpus=1:mpiprocs=12
+## FYI, #PBS  -l place=excl,select=1:ncpus=1:mem=8000MB:prepost=true
+## to be tested #PBS  -l place=vscatter:excl,select=12:ncpus=1:mem=16000MB:mpiprocs=12:prepost=true
+## FYI #PBS  -l place=vscatter:excl,select=1:ncpus=12:mem=64GB:mpiprocs=12:prepost=true
+
+#PBS  -l walltime=2:00:00
+
+. /lfs/h1/nos/estofs/noscrub/IT-stofs.v3.1.0/stofs_3d_pac/versions/run.ver
+
+module purge
+module load envvar/$envvar_ver
+module load intel/$intel_ver
+module load PrgEnv-intel/$PrgEnv_intel_ver
+module load craype/$craype_ver
+module load cray-mpich/$cray_mpich_ver
+module load cray-pals/$cray_pals_ver
+module load hdf5/$hdf5_ver
+module load netcdf/$netcdf_ver
+module load jasper/$jasper_ver
+module load udunits/$udunits_ver
+module load zlib/$zlib_ver
+module load bufr/$bufr_ver
+module load g2/$g2_ver
+module load w3nco/$w3nco_ver
+module load w3emc/$w3emc_ver
+
+module load subversion/${subversion_ver}
+#module load python/${python_ver}
+module unload python
+module load ve/stofs/${ve_stofs}
+
+module load prod_envir/${prod_envir_ver}
+module load prod_util/${prod_util_ver}
+
+module load cfp/${cfp_ver}
+
+module load libjpeg/$libjpeg_ver
+module load grib_util/${grib_util_ver}
+module load gsl/${gsl_ver}
+module load wgrib2/$wgrib2_ver
+module load nco/${nco_ver}
+
+module use /apps/prod/hpc-stack/modulefiles/stack
+module load hpc/$hpc_ver
+
+echo "module list in jstofs_3d_pac_prep_t12z.ecf"
+module list
+
+export model=stofs
+export RUN=stofs_3d_pac
+export HOMEstofs=${HOMEstofs:-/lfs/h1/nos/estofs/noscrub/IT-${model}.${stofs_ver}/${model}_3d_pac}
+
+
+dir_jobs=${DIR_JOBS}
+
+if [[ ! -v YMD_CURRENT_DATE_RERUN ]] || [[ -z "$YMD_CURRENT_DATE_RERUN" ]]; then
+   export YMD_MODEL_RUN=`date +%Y%m%d`
+else
+   export YMD_MODEL_RUN=${YMD_CURRENT_DATE_RERUN}
+fi
+
+echo; echo "In jstofs_3d_pac_post1_t12z.ecf: YMD_MODEL_RUN = $YMD_MODEL_RUN "; echo
+
+${HOMEstofs}/jobs/JSTOFS_3D_PAC_POST_II  ${YMD_MODEL_RUN}
+
+
+echo  
+echo 'End of jstofs_3d_pac_post2_t12z.ecf'
+echo 
+
+

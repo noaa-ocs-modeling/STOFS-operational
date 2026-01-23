@@ -1,0 +1,15 @@
+defdim("node_final",$node_ind1.size+$node_ind2.size+$node_pac1.size+$node_pac2.size+$node_pac3.size+$node_arc.size);
+map_to_global_node_final[node_final]=0;
+tracer_concentration_final[time, node_final, nLevels, one]=float(0.);
+map_to_global_node_final(0:$node_ind1.size-1)=map_to_global_node_ind1;
+map_to_global_node_final($node_ind1.size:$node_ind1.size+$node_ind2.size-1)=map_to_global_node_ind2;
+map_to_global_node_final($node_ind1.size+$node_ind2.size:$node_ind1.size+$node_ind2.size+$node_pac1.size-1)=map_to_global_node_pac1;
+map_to_global_node_final($node_ind1.size+$node_ind2.size+$node_pac1.size:$node_ind1.size+$node_ind2.size+$node_pac1.size+$node_pac2.size-1)=map_to_global_node_pac2;
+map_to_global_node_final($node_ind1.size+$node_ind2.size+$node_pac1.size+$node_pac2.size:$node_ind1.size+$node_ind2.size+$node_pac1.size+$node_pac2.size+$node_pac3.size-1)=map_to_global_node_pac3;
+map_to_global_node_final($node_ind1.size+$node_ind2.size+$node_pac1.size+$node_pac2.size+$node_pac3.size:$node_ind1.size+$node_ind2.size+$node_pac1.size+$node_pac2.size+$node_pac3.size+$node_arc.size-1)=map_to_global_node_arc;
+tracer_concentration_final(:,0:$node_ind1.size-1,:,:)=tracer_concentration_ind1;
+tracer_concentration_final(:,$node_ind1.size:$node_ind1.size+$node_ind2.size-1,:,:)=tracer_concentration_ind2;
+tracer_concentration_final(:,$node_ind1.size+$node_ind2.size:$node_ind1.size+$node_ind2.size+$node_pac1.size-1,:,:)=tracer_concentration_pac1;
+tracer_concentration_final(:,$node_ind1.size+$node_ind2.size+$node_pac1.size:$node_ind1.size+$node_ind2.size+$node_pac1.size+$node_pac2.size-1,:,:)=tracer_concentration_pac2;
+tracer_concentration_final(:,$node_ind1.size+$node_ind2.size+$node_pac1.size+$node_pac2.size:$node_ind1.size+$node_ind2.size+$node_pac1.size+$node_pac2.size+$node_pac3.size-1,:,:)=tracer_concentration_pac3;
+tracer_concentration_final(:,$node_ind1.size+$node_ind2.size+$node_pac1.size+$node_pac2.size+$node_pac3.size:$node_ind1.size+$node_ind2.size+$node_pac1.size+$node_pac2.size+$node_pac3.size+$node_arc.size-1,:,:)=tracer_concentration_arc;

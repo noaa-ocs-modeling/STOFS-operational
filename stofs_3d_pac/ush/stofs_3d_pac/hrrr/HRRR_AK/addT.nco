@@ -1,0 +1,12 @@
+defdim("time",-1);
+time[time]=float(tin/24.) ;
+lon=gridlon_0;
+lat=gridlat_0;
+stmp[time,ygrid_0,xgrid_0]=TMP_P0_L103_GST0;
+spfh[time,ygrid_0,xgrid_0]=SPFH_P0_L103_GST0;
+uwind[time,ygrid_0,xgrid_0]=UGRD_P0_L103_GST0;
+vwind[time,ygrid_0,xgrid_0]=VGRD_P0_L103_GST0;
+prmsl[time,ygrid_0,xgrid_0]=MSLMA_P0_L101_GST0;
+prate[time,ygrid_0,xgrid_0]=PRATE_P0_L1_GST0;
+dswrf[time,ygrid_0,xgrid_0]=DSWRF_P0_L1_GST0;
+dlwrf[time,ygrid_0,xgrid_0]=DLWRF_P0_L1_GST0;

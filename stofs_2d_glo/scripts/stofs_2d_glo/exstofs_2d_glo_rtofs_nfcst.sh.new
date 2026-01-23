@@ -1,0 +1,97 @@
+#!/bin/bash
+###############################################################################
+#                                                                             #
+# This script is the preprocessor for making RTOFS forcing                    #
+# It sets some shell script variables for export to child scripts             #
+# and copies some generally used files to the work directory.                 #
+# After this the actual preprocessing is performed by the following scripts:  #
+#                                                                             #
+# Remarks :                                                                   #
+# - This script is run only at the first operational run, which is            #
+#   COLDSTART = YES                                                           #
+#                                                                             #
+#                                                                 Jul, 2023   #
+#                                                                 Jun, 2025   #
+#                                                                             #
+###############################################################################
+# Start of exstofs_2d_glo_rtofs_nfcst.sh script ----------------------------- #
+# 0.  Preparation
+# 0.a Basic modes of operation
+
+  seton='-xa'
+  setoff='+xa'
+  set $seton
+
+  msg="Starting stofs_2d_glo_rtofs_nfcst scripts"
+  echo "$msg"
+  postmsg "$jlogfile" "$msg"
+
+  wndh=3
+  nowh=6
+  lsth=180
+
+# --------------------------------------------------------------------------- #
+# 1.  Set times
+# 1.a Set all necessary times
+#     YMDH     :  current time cycle in yyyymmddhh format
+#     time_beg :  begin time of run (normally, -6 hour nowcast or the most recent hotstart time)
+#     time_now :  current time
+#     time_end :  ending time of run ($lsth hour forecast)
+
+  export date=$PDY
+  export YMDH=${PDY}${cyc}
+  export nback=20
+
+  time_now=$YMDH
+  time_end=`$NDATE $lsth $YMDH`
+
+# --------------------------------------------------------------------------- #
+# 2.  Run the copy_nco_rtofs.sh
+
+  export pgm="copy_nco_rtofs.sh"
+  . prep_step
+  startmsg
+  mpiexec -n 1 -ppn 1 $USHstofs/copy_nco_rtofs.sh "$PDY" "$cyc" >> $pgmout 2>errfile
+  export err=$?; err_chk
+  cpreq  $DATA/GLBy0.08/test.inp .
+  cpreq  $DATA/GLBy0.08/ogcm_data.txt .
+  
+# --------------------------------------------------------------------------- #
+# 3.  Run the rtofs_rename.sh
+
+  export pgm="copy_rename.sh"
+  . prep_step
+  startmsg
+  mpiexec -n 1 -ppn 1 $USHstofs/rtofs_rename.sh >> $pgmout 2>errfile
+  export err=$?; err_chk
+  
+# --------------------------------------------------------------------------- #
+# 4.  Run dlv3_array_pbs.sh
+
+  export pgm="dlv3_array_pbs.sh"
+  . prep_step
+  startmsg
+  mpiexec -n 6 -ppn 6 $USHstofs/dlv3_array_pbs.sh >> $pgmout 2>errfile
+  export err=$?; err_chk
+  ln -s ${DATA}/GLBy0.08/*.nc .
+
+# --------------------------------------------------------------------------- #
+# 5.  Execute stofs_2d_glo_OGCM_DL
+
+  export pgm="stofs_2d_glo_OGCM_DL"
+  . prep_step
+  startmsg
+  ln -s $FIXstofs/${RUN}_grid fort.14
+  mpiexec -n 1 -ppn 1 $EXECstofs/stofs_2d_glo_OGCM_DL < test.inp >> $pgmout 2>errfile
+  export err=$?; err_chk
+
+  if [ $SENDCOM = YES ]; then
+     echo "Copying fott.11.nc file to COMOUT"
+     cpfs fort.11.nc $COMOUT/${RUN}.${cycle}.fort.11.nc
+  fi
+
+  msg="Completing stofs_2d_glo_rtofs_nfcst script"
+  echo "$msg"
+  postmsg "$jlogfile" "$msg"
+
+# End of exstofs_2d_glo_rtofs_nfcst.sh script --------------------------------- #

@@ -1,0 +1,42 @@
+# How to read this manual
+This manual contains detailed information on physical and numerical formulations, as well as usage for 
+SCHISM. For beginners, we suggest you familiarize yourself with the basic notations in 
+[Physical formulation](physical-formulation.md) and [Numerical formulation](geometry-discretization.md) 
+but skip some details in those two chapters; there is also a ‘cheat sheet’ in 'Typical workflow' below. This chapter describes how to set up the model, including mesh  generation, and 
+so should be read carefully, in consultation with appropriate sections in the 2 chapters and detailed descriptions on [inputs/outputs](../input-output/overview.md).
+Since SCHISM is quite a sophisticated package, we strongly recommend you start from the simple 
+[test cases](../getting-started/test_suite.md) and gradually progress toward more complex 3D baroclinic or coupled applications.
+
+# Notation used in this manual
+We will use bold characters to denote vectors and matrices, and unbold characters to denote scalars in mathematical equations. In addition, superscripts usually denote time step and subscripts denote spatial locations. E.g., $T_{i,k}^{n+1}$ may mean the temperature at step $n+1$ (i.e., new time step) and prism $(i,k)$, where $i$ is the element number and $k$ is the (whole) vertical index. We will use inline code blocks to denote input file names (e.g. `param.nml`) or code/pseudo-code fragments. 
+
+Below are some notations used in this manual:
+
+$N_p$: number of nodes
+
+$N_s$: number of sides
+
+$N_e$: number of elements
+
+$N_z$: maximum number of vertical levels
+
+$i34(j)$: type of an element $j$ (3: triangle; 4: quad)
+
+$Nb(i)$: number of surrounding elements of a node $i$;
+
+$kbp(i)$: bottom index as seen by a node $i$
+
+$kbs(i)$: bottom index as seen by a side $i$
+
+$kbe(i)$: bottom index as seen by an element $i$
+
+$A$: area of an element
+
+$\Delta z$: layer thickness (at a node, side or elem.)
+
+$\delta_{ij}$: Kronecker Delta function ($=1$ when $i=j$; $0$ otherwise)
+
+# Other resources for beginners
+Over the years various user groups have come up with their own documentations
+ to help SCHISM beginners, and you may find them helpful. For example, CA Dept of Water
+ Resources group maintained a ([Hello SCHISM site](https://cadwrdeltamodeling.github.io/HelloSCHISM/index.html)).

@@ -1,0 +1,6 @@
+Author: Dan Yu 
+Main script is get_hrrr.sh
+Modify parameter (domain, time... ) as needed.
+This tool needs "curl or wget" with nco (to modify netcdf) to adjust output netcdf as SCHISM sflux nc format, also ncl.
+Combine 3 different file input (_air, _rad, _prc) as 1.
+Just link as you need. 

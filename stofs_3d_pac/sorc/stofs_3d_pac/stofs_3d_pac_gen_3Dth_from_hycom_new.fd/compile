@@ -1,0 +1,3 @@
+ifort -O2 -mcmodel=medium -assume byterecl -CB -o gen_3Dth_from_hycom.exe ./UtilLib/schism_geometry.f90 \
+ ./UtilLib/extract_mod.f90 ./UtilLib/compute_zcor.f90 ./UtilLib/pt_in_poly_test.f90 gen_3Dth_from_hycom.f90 \
+-I$NETCDF_FORTRAN/include -I$NETCDF_C/include -L$NETCDF_FORTRAN/lib -L$NETCDF_C/lib -lnetcdf -lnetcdff

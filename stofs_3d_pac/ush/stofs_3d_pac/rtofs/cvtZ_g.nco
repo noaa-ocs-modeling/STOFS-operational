@@ -1,0 +1,3 @@
+surf_el=float((ssh-0.)/0.001);
+surf_el@add_offset=float(0.);
+surf_el@scale_factor=float(0.001);

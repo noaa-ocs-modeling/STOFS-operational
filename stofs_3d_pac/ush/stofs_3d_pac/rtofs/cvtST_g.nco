@@ -1,0 +1,8 @@
+temperature.change_miss(-30000);
+salinity.change_miss(-30000);
+temperature=float((temperature-20.)/0.001);
+temperature@add_offset=float(20.);
+temperature@scale_factor=float(0.001);
+salinity=float((salinity-20.)/0.001);
+salinity@add_offset=float(20.);
+salinity@scale_factor=float(0.001);

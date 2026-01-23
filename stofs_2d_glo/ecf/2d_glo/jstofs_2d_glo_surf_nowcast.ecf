@@ -1,0 +1,41 @@
+#PBS -N stofs_2d_glo_surf_nowcast_%CYC%
+#PBS -j oe
+#PBS -S /bin/bash
+#PBS -A %PROJ%-%PROJENVIR%
+#PBS -q %QUEUE%
+#PBS -l place=vscatter:exclhost,select=32:ncpus=128:mpiprocs=128:ompthreads=1
+#PBS -l walltime=0:30:00
+#PBS -l debug=true
+
+export NCPU=4064
+export PPN=128
+
+#for padcirc executable: Dedicate ${NUM_WRITERS} MPI processes to writing fort.63, fort.64, fort.73 and fort.74
+export NUM_WRITERS=32
+export TOT_NCPU=$((NCPU + NUM_WRITERS))
+
+export model=stofs
+%include <head.h>
+%include <envir-p1.h>
+
+export cyc=%CYC%
+
+if [ -n "%COLDSTART:%" ]; then export COLDSTART=${COLDSTART:-%COLDSTART:%}; fi
+
+#module load PrgEnv-intel/$PrgEnv_intel_ver
+module load craype/$craype_ver
+module load intel/$intel_ver
+module load cray-mpich/$cray_mpich_ver
+module load cray-pals/$cray_pals_ver
+module load hdf5/$hdf5_ver
+module load netcdf/$netcdf_ver
+#module load udunits/$udunits_ver
+#module load gsl/$gsl_ver
+#module load libjpeg/$libjpeg_ver
+module load adcirc/$adcirc_ver
+module list
+
+${HOMEstofs}/jobs/JSTOFS_2D_GLO_SURF_NOWCAST
+
+%include <tail.h>
+

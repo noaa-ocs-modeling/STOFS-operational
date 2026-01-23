@@ -1,0 +1,35 @@
+# Swap files
+*.swp
+*.swo
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Local dev directories at root level (kept locally, not in git)
+/ecf/
+/ecf_mjisan/
+/exec/
+/gempak/
+/jobs/
+/jobs_mjisan/
+/lib/
+/parm/
+/scripts/
+/scripts_mjisan/
+/sorc/
+/ush/
+/ush_mjisan/
+/v1.1.1/
+/versions/
+
+# Large data files in stofs_3d_pac
+stofs_3d_pac/sorc/stofs_3d_pac/stofs_3d_pac_gen_partition_prop.fd/vgrid.in
+stofs_3d_pac/sorc/stofs_3d_pac/stofs_3d_pac_gen_partition_prop.fd/graphinfo
+stofs_3d_pac/sorc/stofs_3d_pac/stofs_3d_pac_gen_partition_prop.fd/graphinfo.part.*
+stofs_3d_pac/sorc/stofs_3d_pac/stofs_3d_pac_gen_partition_prop.fd/*.gr3
+stofs_3d_pac/sorc/stofs_3d_pac/stofs_3d_pac_gen_partition_prop.fd/stofs_3d_pac_partition.prop_*
+stofs_3d_pac/ush/stofs_3d_pac/hrrr/**/weight_*.nc
+stofs_3d_pac/ush/stofs_3d_pac/hrrr/**/destination_grid_file.nc
+stofs_3d_pac/ush/stofs_3d_pac/hrrr/**/source_grid_file.nc
+stofs_3d_pac/ush/stofs_3d_pac/hrrr/**/itpgrid_xy.nc

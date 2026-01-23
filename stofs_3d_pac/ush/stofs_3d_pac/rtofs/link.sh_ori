@@ -1,0 +1,33 @@
+#/bin/bash
+#cd /home1/06923/hyu05/work/oper_3D_Pac/rtofs/$1/link
+###cd /sciclone/schism10/hyu05/NOAA_Pacific/rtofs_global_subset/frontera/rtofs/$1/link
+dir_wk=${DATA_prep_rtofs}
+cd ${dir_wk}/$1/link
+#rm old link
+rm -f ./*.nc
+
+# Time range: -2~0 days to avoid vacancy
+ict1=0
+#for ((iday=0;iday>=-3; iday=iday-1))
+for ((iday=1;iday>=-2; iday=iday-1))
+   do
+     fday=$(/bin/date --date="$iday days ago" +%Y%m%d)
+
+   if [ -f ../outputs/SSH_${fday}12.nc ]
+      then
+        ict1=$(($ict1+1))
+           ln -s ../outputs/*_${fday}12.nc .
+   fi
+done
+
+#Check link
+if [ $ict1 -eq 0 ]  ;
+   then
+     echo "No files to link!"  > ../nofile_in_rtofs
+   else
+     ncrcat -O SSH*nc ../SSH_1.nc
+     ncrcat -O ST*nc ../TS_1.nc
+     ncrcat -O UV*nc ../UV_1.nc
+fi
+
+
