@@ -1,0 +1,19 @@
+# Large grid/mesh data files
+sorc/stofs_3d_pac/stofs_3d_pac_gen_partition_prop.fd/vgrid.in
+sorc/stofs_3d_pac/stofs_3d_pac_gen_partition_prop.fd/graphinfo
+sorc/stofs_3d_pac/stofs_3d_pac_gen_partition_prop.fd/graphinfo.part.*
+sorc/stofs_3d_pac/stofs_3d_pac_gen_partition_prop.fd/*.gr3
+sorc/stofs_3d_pac/stofs_3d_pac_gen_partition_prop.fd/stofs_3d_pac_partition.prop_*
+
+# Large HRRR weight/grid files
+ush/stofs_3d_pac/hrrr/**/weight_*.nc
+ush/stofs_3d_pac/hrrr/**/destination_grid_file.nc
+ush/stofs_3d_pac/hrrr/**/source_grid_file.nc
+ush/stofs_3d_pac/hrrr/**/itpgrid_xy.nc
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Nested git repos
+ush/stofs_3d_pac/pysh/pylibs/.git/

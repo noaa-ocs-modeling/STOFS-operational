@@ -1,0 +1,39 @@
+# DO NOT DELETE THIS LINE - used by make depend
+o/svn.WCOSS2/hydraulic_structures.o: o/svn.WCOSS2/schism_glbl.mod o/svn.WCOSS2/schism_msgp.mod
+o/svn.WCOSS2/misc_modules.o: o/svn.WCOSS2/schism_glbl.mod o/svn.WCOSS2/schism_msgp.mod
+o/svn.WCOSS2/schism_io.o: o/svn.WCOSS2/schism_glbl.mod o/svn.WCOSS2/schism_msgp.mod
+o/svn.WCOSS2/schism_msgp.o: o/svn.WCOSS2/iso_c_binding.mod o/svn.WCOSS2/schism_glbl.mod
+o/svn.WCOSS2/scribe_io.o: o/svn.WCOSS2/schism_glbl.mod o/svn.WCOSS2/schism_msgp.mod
+o/svn.WCOSS2/schism_driver.o: o/svn.WCOSS2/schism_msgp.mod o/svn.WCOSS2/schism_version.mod o/svn.WCOSS2/scribe_io.mod
+o/svn.WCOSS2/bktrk_subs.o: o/svn.WCOSS2/hydraulic_structures.mod o/svn.WCOSS2/schism_glbl.mod o/svn.WCOSS2/schism_msgp.mod
+o/svn.WCOSS2/grid_subs.o: o/svn.WCOSS2/schism_glbl.mod o/svn.WCOSS2/schism_io.mod o/svn.WCOSS2/schism_msgp.mod
+o/svn.WCOSS2/misc_subs.o: o/svn.WCOSS2/hydraulic_structures.mod o/svn.WCOSS2/schism_glbl.mod o/svn.WCOSS2/schism_io.mod
+o/svn.WCOSS2/misc_subs.o: o/svn.WCOSS2/schism_msgp.mod o/svn.WCOSS2/sed_mod.mod
+o/svn.WCOSS2/schism_finalize.o: o/svn.WCOSS2/fabm_schism.mod o/svn.WCOSS2/harm.mod o/svn.WCOSS2/hydraulic_structures.mod
+o/svn.WCOSS2/schism_finalize.o: o/svn.WCOSS2/petsc_schism.mod o/svn.WCOSS2/schism_glbl.mod o/svn.WCOSS2/schism_io.mod
+o/svn.WCOSS2/schism_finalize.o: o/svn.WCOSS2/schism_msgp.mod
+o/svn.WCOSS2/schism_init.o: o/svn.WCOSS2/bio_param.mod o/svn.WCOSS2/biology.mod o/svn.WCOSS2/biology_napzd.mod o/svn.WCOSS2/cosine_mod.mod
+o/svn.WCOSS2/schism_init.o: o/svn.WCOSS2/eclight.mod o/svn.WCOSS2/fabm_schism.mod o/svn.WCOSS2/fib_param.mod o/svn.WCOSS2/gen_modules_clock.mod
+o/svn.WCOSS2/schism_init.o: o/svn.WCOSS2/harm.mod o/svn.WCOSS2/hydraulic_structures.mod o/svn.WCOSS2/ice_module.mod
+o/svn.WCOSS2/schism_init.o: o/svn.WCOSS2/ice_therm_mod.mod o/svn.WCOSS2/icedrv_main.mod o/svn.WCOSS2/icepack_intfc.mod o/svn.WCOSS2/icm_mod.mod
+o/svn.WCOSS2/schism_init.o: o/svn.WCOSS2/iso_c_binding.mod o/svn.WCOSS2/mice_module.mod o/svn.WCOSS2/mice_therm_mod.mod
+o/svn.WCOSS2/schism_init.o: o/svn.WCOSS2/misc_modules.mod o/svn.WCOSS2/mtridiagonal.mod o/svn.WCOSS2/pahm_utilities.mod o/svn.WCOSS2/parwind.mod
+o/svn.WCOSS2/schism_init.o: o/svn.WCOSS2/petsc_schism.mod o/svn.WCOSS2/schism_glbl.mod o/svn.WCOSS2/schism_io.mod o/svn.WCOSS2/schism_msgp.mod
+o/svn.WCOSS2/schism_init.o: o/svn.WCOSS2/sed_mod.mod o/svn.WCOSS2/turbulence.mod
+o/svn.WCOSS2/schism_step.o: o/svn.WCOSS2/bio_param.mod o/svn.WCOSS2/biology.mod o/svn.WCOSS2/biology_napzd.mod o/svn.WCOSS2/cosine_mod.mod
+o/svn.WCOSS2/schism_step.o: o/svn.WCOSS2/eclight.mod o/svn.WCOSS2/fabm_schism.mod o/svn.WCOSS2/gen_modules_clock.mod o/svn.WCOSS2/harm.mod
+o/svn.WCOSS2/schism_step.o: o/svn.WCOSS2/hydraulic_structures.mod o/svn.WCOSS2/ice_module.mod o/svn.WCOSS2/ice_therm_mod.mod
+o/svn.WCOSS2/schism_step.o: o/svn.WCOSS2/icedrv_main.mod o/svn.WCOSS2/icepack_intfc.mod o/svn.WCOSS2/icm_mod.mod o/svn.WCOSS2/mice_module.mod
+o/svn.WCOSS2/schism_step.o: o/svn.WCOSS2/mice_therm_mod.mod o/svn.WCOSS2/misc_modules.mod o/svn.WCOSS2/pahm_global.mod o/svn.WCOSS2/parwind.mod
+o/svn.WCOSS2/schism_step.o: o/svn.WCOSS2/petsc_schism.mod o/svn.WCOSS2/schism_glbl.mod o/svn.WCOSS2/schism_io.mod o/svn.WCOSS2/schism_msgp.mod
+o/svn.WCOSS2/schism_step.o: o/svn.WCOSS2/sed2d_mod.mod o/svn.WCOSS2/sed_mod.mod o/svn.WCOSS2/turbulence.mod
+o/svn.WCOSS2/sflux_9c.o: o/svn.WCOSS2/schism_glbl.mod o/svn.WCOSS2/schism_msgp.mod
+o/svn.WCOSS2/solver_subs.o: o/svn.WCOSS2/schism_glbl.mod o/svn.WCOSS2/schism_msgp.mod
+o/svn.WCOSS2/transport_TVD_imp.o: o/svn.WCOSS2/misc_modules.mod o/svn.WCOSS2/schism_glbl.mod o/svn.WCOSS2/schism_msgp.mod
+o/svn.WCOSS2/hydraulic_structures.mod: o/svn.WCOSS2/hydraulic_structures.o
+o/svn.WCOSS2/misc_modules.mod: o/svn.WCOSS2/misc_modules.o
+o/svn.WCOSS2/netcdf_io.mod: o/svn.WCOSS2/sflux_9c.o
+o/svn.WCOSS2/schism_glbl.mod: o/svn.WCOSS2/schism_glbl.o
+o/svn.WCOSS2/schism_io.mod: o/svn.WCOSS2/schism_io.o
+o/svn.WCOSS2/schism_msgp.mod: o/svn.WCOSS2/schism_msgp.o
+o/svn.WCOSS2/scribe_io.mod: o/svn.WCOSS2/scribe_io.o

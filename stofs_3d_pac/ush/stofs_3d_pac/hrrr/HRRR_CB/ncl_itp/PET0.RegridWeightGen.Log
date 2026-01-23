@@ -1,0 +1,222 @@
+20230504 184828.289 INFO             PET0 Running with ESMF Version 7.1.0r
+20230504 184828.290 INFO             PET0 Finalizing ESMF
+20230504 184828.311 INFO             PET0 Running with ESMF Version 7.1.0r
+20230504 184828.313 INFO             PET0 Finalizing ESMF
+20230504 184828.342 INFO             PET0 Running with ESMF Version 7.1.0r
+20230504 185241.659 INFO             PET0 Finalizing ESMF
+20230504 185246.274 INFO             PET0 Running with ESMF Version 7.1.0r
+20230504 185246.274 INFO             PET0 Finalizing ESMF
+20230504 185246.297 INFO             PET0 Running with ESMF Version 7.1.0r
+20230504 185246.297 INFO             PET0 Finalizing ESMF
+20230504 185246.329 INFO             PET0 Running with ESMF Version 7.1.0r
+20230504 185310.151 INFO             PET0 Finalizing ESMF
+20230504 185313.030 INFO             PET0 Running with ESMF Version 7.1.0r
+20230504 185313.030 INFO             PET0 Finalizing ESMF
+20230504 185313.055 INFO             PET0 Running with ESMF Version 7.1.0r
+20230504 185313.055 INFO             PET0 Finalizing ESMF
+20230504 185313.084 INFO             PET0 Running with ESMF Version 7.1.0r
+20230504 185331.065 INFO             PET0 Finalizing ESMF
+20230504 195357.531 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20230504 195357.531 INFO             PET0 !!! THE ESMF_LOG IS SET TO OUTPUT ALL LOG MESSAGES !!!
+20230504 195357.531 INFO             PET0 !!!     THIS MAY CAUSE SLOWDOWN IN PERFORMANCE     !!!
+20230504 195357.531 INFO             PET0 !!! FOR PRODUCTION RUNS, USE:                      !!!
+20230504 195357.531 INFO             PET0 !!!                   ESMF_LOGKIND_Multi_On_Error  !!!
+20230504 195357.531 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20230504 195357.531 INFO             PET0 Running with ESMF Version   : 8.3.0
+20230504 195357.531 INFO             PET0 ESMF library build date/time: "Jun 14 2022" "12:41:23"
+20230504 195357.531 INFO             PET0 ESMF library build location : /home1/06923/hyu05/work/CWB_DA/esmf-8.3.0
+20230504 195357.531 INFO             PET0 ESMF_COMM                   : intelmpi
+20230504 195357.541 INFO             PET0 ESMF_MOAB                   : enabled
+20230504 195357.541 INFO             PET0 ESMF_LAPACK                 : enabled
+20230504 195357.541 INFO             PET0 ESMF_NETCDF                 : enabled
+20230504 195357.541 INFO             PET0 ESMF_PNETCDF                : disabled
+20230504 195357.541 INFO             PET0 ESMF_PIO                    : enabled
+20230504 195357.541 INFO             PET0 ESMF_YAMLCPP                : enabled
+20230504 195357.572 INFO             PET0 Finalizing ESMF
+20230504 195358.044 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20230504 195358.044 INFO             PET0 !!! THE ESMF_LOG IS SET TO OUTPUT ALL LOG MESSAGES !!!
+20230504 195358.044 INFO             PET0 !!!     THIS MAY CAUSE SLOWDOWN IN PERFORMANCE     !!!
+20230504 195358.044 INFO             PET0 !!! FOR PRODUCTION RUNS, USE:                      !!!
+20230504 195358.044 INFO             PET0 !!!                   ESMF_LOGKIND_Multi_On_Error  !!!
+20230504 195358.044 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20230504 195358.044 INFO             PET0 Running with ESMF Version   : 8.3.0
+20230504 195358.044 INFO             PET0 ESMF library build date/time: "Jun 14 2022" "12:41:23"
+20230504 195358.044 INFO             PET0 ESMF library build location : /home1/06923/hyu05/work/CWB_DA/esmf-8.3.0
+20230504 195358.044 INFO             PET0 ESMF_COMM                   : intelmpi
+20230504 195358.045 INFO             PET0 ESMF_MOAB                   : enabled
+20230504 195358.045 INFO             PET0 ESMF_LAPACK                 : enabled
+20230504 195358.045 INFO             PET0 ESMF_NETCDF                 : enabled
+20230504 195358.045 INFO             PET0 ESMF_PNETCDF                : disabled
+20230504 195358.045 INFO             PET0 ESMF_PIO                    : enabled
+20230504 195358.045 INFO             PET0 ESMF_YAMLCPP                : enabled
+20230504 195358.126 INFO             PET0 Finalizing ESMF
+20230504 195358.603 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20230504 195358.603 INFO             PET0 !!! THE ESMF_LOG IS SET TO OUTPUT ALL LOG MESSAGES !!!
+20230504 195358.603 INFO             PET0 !!!     THIS MAY CAUSE SLOWDOWN IN PERFORMANCE     !!!
+20230504 195358.603 INFO             PET0 !!! FOR PRODUCTION RUNS, USE:                      !!!
+20230504 195358.603 INFO             PET0 !!!                   ESMF_LOGKIND_Multi_On_Error  !!!
+20230504 195358.603 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20230504 195358.603 INFO             PET0 Running with ESMF Version   : 8.3.0
+20230504 195358.603 INFO             PET0 ESMF library build date/time: "Jun 14 2022" "12:41:23"
+20230504 195358.603 INFO             PET0 ESMF library build location : /home1/06923/hyu05/work/CWB_DA/esmf-8.3.0
+20230504 195358.603 INFO             PET0 ESMF_COMM                   : intelmpi
+20230504 195358.604 INFO             PET0 ESMF_MOAB                   : enabled
+20230504 195358.604 INFO             PET0 ESMF_LAPACK                 : enabled
+20230504 195358.604 INFO             PET0 ESMF_NETCDF                 : enabled
+20230504 195358.604 INFO             PET0 ESMF_PNETCDF                : disabled
+20230504 195358.604 INFO             PET0 ESMF_PIO                    : enabled
+20230504 195358.604 INFO             PET0 ESMF_YAMLCPP                : enabled
+20230504 195518.188 INFO             PET0 Finalizing ESMF
+20230504 195522.924 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20230504 195522.924 INFO             PET0 !!! THE ESMF_LOG IS SET TO OUTPUT ALL LOG MESSAGES !!!
+20230504 195522.924 INFO             PET0 !!!     THIS MAY CAUSE SLOWDOWN IN PERFORMANCE     !!!
+20230504 195522.924 INFO             PET0 !!! FOR PRODUCTION RUNS, USE:                      !!!
+20230504 195522.924 INFO             PET0 !!!                   ESMF_LOGKIND_Multi_On_Error  !!!
+20230504 195522.924 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20230504 195522.924 INFO             PET0 Running with ESMF Version   : 8.3.0
+20230504 195522.924 INFO             PET0 ESMF library build date/time: "Jun 14 2022" "12:41:23"
+20230504 195522.924 INFO             PET0 ESMF library build location : /home1/06923/hyu05/work/CWB_DA/esmf-8.3.0
+20230504 195522.924 INFO             PET0 ESMF_COMM                   : intelmpi
+20230504 195522.925 INFO             PET0 ESMF_MOAB                   : enabled
+20230504 195522.925 INFO             PET0 ESMF_LAPACK                 : enabled
+20230504 195522.925 INFO             PET0 ESMF_NETCDF                 : enabled
+20230504 195522.925 INFO             PET0 ESMF_PNETCDF                : disabled
+20230504 195522.925 INFO             PET0 ESMF_PIO                    : enabled
+20230504 195522.925 INFO             PET0 ESMF_YAMLCPP                : enabled
+20230504 195522.925 INFO             PET0 Finalizing ESMF
+20230504 195523.380 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20230504 195523.380 INFO             PET0 !!! THE ESMF_LOG IS SET TO OUTPUT ALL LOG MESSAGES !!!
+20230504 195523.380 INFO             PET0 !!!     THIS MAY CAUSE SLOWDOWN IN PERFORMANCE     !!!
+20230504 195523.380 INFO             PET0 !!! FOR PRODUCTION RUNS, USE:                      !!!
+20230504 195523.380 INFO             PET0 !!!                   ESMF_LOGKIND_Multi_On_Error  !!!
+20230504 195523.380 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20230504 195523.380 INFO             PET0 Running with ESMF Version   : 8.3.0
+20230504 195523.380 INFO             PET0 ESMF library build date/time: "Jun 14 2022" "12:41:23"
+20230504 195523.380 INFO             PET0 ESMF library build location : /home1/06923/hyu05/work/CWB_DA/esmf-8.3.0
+20230504 195523.380 INFO             PET0 ESMF_COMM                   : intelmpi
+20230504 195523.381 INFO             PET0 ESMF_MOAB                   : enabled
+20230504 195523.381 INFO             PET0 ESMF_LAPACK                 : enabled
+20230504 195523.381 INFO             PET0 ESMF_NETCDF                 : enabled
+20230504 195523.381 INFO             PET0 ESMF_PNETCDF                : disabled
+20230504 195523.381 INFO             PET0 ESMF_PIO                    : enabled
+20230504 195523.381 INFO             PET0 ESMF_YAMLCPP                : enabled
+20230504 195523.382 INFO             PET0 Finalizing ESMF
+20230504 195523.857 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20230504 195523.857 INFO             PET0 !!! THE ESMF_LOG IS SET TO OUTPUT ALL LOG MESSAGES !!!
+20230504 195523.857 INFO             PET0 !!!     THIS MAY CAUSE SLOWDOWN IN PERFORMANCE     !!!
+20230504 195523.857 INFO             PET0 !!! FOR PRODUCTION RUNS, USE:                      !!!
+20230504 195523.857 INFO             PET0 !!!                   ESMF_LOGKIND_Multi_On_Error  !!!
+20230504 195523.857 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20230504 195523.857 INFO             PET0 Running with ESMF Version   : 8.3.0
+20230504 195523.857 INFO             PET0 ESMF library build date/time: "Jun 14 2022" "12:41:23"
+20230504 195523.857 INFO             PET0 ESMF library build location : /home1/06923/hyu05/work/CWB_DA/esmf-8.3.0
+20230504 195523.857 INFO             PET0 ESMF_COMM                   : intelmpi
+20230504 195523.857 INFO             PET0 ESMF_MOAB                   : enabled
+20230504 195523.857 INFO             PET0 ESMF_LAPACK                 : enabled
+20230504 195523.857 INFO             PET0 ESMF_NETCDF                 : enabled
+20230504 195523.857 INFO             PET0 ESMF_PNETCDF                : disabled
+20230504 195523.857 INFO             PET0 ESMF_PIO                    : enabled
+20230504 195523.857 INFO             PET0 ESMF_YAMLCPP                : enabled
+20230504 195546.922 INFO             PET0 Finalizing ESMF
+20230504 195549.958 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20230504 195549.958 INFO             PET0 !!! THE ESMF_LOG IS SET TO OUTPUT ALL LOG MESSAGES !!!
+20230504 195549.958 INFO             PET0 !!!     THIS MAY CAUSE SLOWDOWN IN PERFORMANCE     !!!
+20230504 195549.958 INFO             PET0 !!! FOR PRODUCTION RUNS, USE:                      !!!
+20230504 195549.958 INFO             PET0 !!!                   ESMF_LOGKIND_Multi_On_Error  !!!
+20230504 195549.958 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20230504 195549.958 INFO             PET0 Running with ESMF Version   : 8.3.0
+20230504 195549.958 INFO             PET0 ESMF library build date/time: "Jun 14 2022" "12:41:23"
+20230504 195549.958 INFO             PET0 ESMF library build location : /home1/06923/hyu05/work/CWB_DA/esmf-8.3.0
+20230504 195549.958 INFO             PET0 ESMF_COMM                   : intelmpi
+20230504 195549.959 INFO             PET0 ESMF_MOAB                   : enabled
+20230504 195549.959 INFO             PET0 ESMF_LAPACK                 : enabled
+20230504 195549.959 INFO             PET0 ESMF_NETCDF                 : enabled
+20230504 195549.959 INFO             PET0 ESMF_PNETCDF                : disabled
+20230504 195549.959 INFO             PET0 ESMF_PIO                    : enabled
+20230504 195549.959 INFO             PET0 ESMF_YAMLCPP                : enabled
+20230504 195549.959 INFO             PET0 Finalizing ESMF
+20230504 195550.409 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20230504 195550.409 INFO             PET0 !!! THE ESMF_LOG IS SET TO OUTPUT ALL LOG MESSAGES !!!
+20230504 195550.409 INFO             PET0 !!!     THIS MAY CAUSE SLOWDOWN IN PERFORMANCE     !!!
+20230504 195550.409 INFO             PET0 !!! FOR PRODUCTION RUNS, USE:                      !!!
+20230504 195550.409 INFO             PET0 !!!                   ESMF_LOGKIND_Multi_On_Error  !!!
+20230504 195550.409 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20230504 195550.409 INFO             PET0 Running with ESMF Version   : 8.3.0
+20230504 195550.409 INFO             PET0 ESMF library build date/time: "Jun 14 2022" "12:41:23"
+20230504 195550.409 INFO             PET0 ESMF library build location : /home1/06923/hyu05/work/CWB_DA/esmf-8.3.0
+20230504 195550.409 INFO             PET0 ESMF_COMM                   : intelmpi
+20230504 195550.410 INFO             PET0 ESMF_MOAB                   : enabled
+20230504 195550.410 INFO             PET0 ESMF_LAPACK                 : enabled
+20230504 195550.410 INFO             PET0 ESMF_NETCDF                 : enabled
+20230504 195550.410 INFO             PET0 ESMF_PNETCDF                : disabled
+20230504 195550.410 INFO             PET0 ESMF_PIO                    : enabled
+20230504 195550.410 INFO             PET0 ESMF_YAMLCPP                : enabled
+20230504 195550.410 INFO             PET0 Finalizing ESMF
+20230504 195550.882 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20230504 195550.882 INFO             PET0 !!! THE ESMF_LOG IS SET TO OUTPUT ALL LOG MESSAGES !!!
+20230504 195550.882 INFO             PET0 !!!     THIS MAY CAUSE SLOWDOWN IN PERFORMANCE     !!!
+20230504 195550.882 INFO             PET0 !!! FOR PRODUCTION RUNS, USE:                      !!!
+20230504 195550.882 INFO             PET0 !!!                   ESMF_LOGKIND_Multi_On_Error  !!!
+20230504 195550.882 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20230504 195550.882 INFO             PET0 Running with ESMF Version   : 8.3.0
+20230504 195550.882 INFO             PET0 ESMF library build date/time: "Jun 14 2022" "12:41:23"
+20230504 195550.882 INFO             PET0 ESMF library build location : /home1/06923/hyu05/work/CWB_DA/esmf-8.3.0
+20230504 195550.882 INFO             PET0 ESMF_COMM                   : intelmpi
+20230504 195550.883 INFO             PET0 ESMF_MOAB                   : enabled
+20230504 195550.883 INFO             PET0 ESMF_LAPACK                 : enabled
+20230504 195550.883 INFO             PET0 ESMF_NETCDF                 : enabled
+20230504 195550.883 INFO             PET0 ESMF_PNETCDF                : disabled
+20230504 195550.883 INFO             PET0 ESMF_PIO                    : enabled
+20230504 195550.883 INFO             PET0 ESMF_YAMLCPP                : enabled
+20230504 195607.717 INFO             PET0 Finalizing ESMF
+20230504 202519.652 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20230504 202519.652 INFO             PET0 !!! THE ESMF_LOG IS SET TO OUTPUT ALL LOG MESSAGES !!!
+20230504 202519.652 INFO             PET0 !!!     THIS MAY CAUSE SLOWDOWN IN PERFORMANCE     !!!
+20230504 202519.652 INFO             PET0 !!! FOR PRODUCTION RUNS, USE:                      !!!
+20230504 202519.652 INFO             PET0 !!!                   ESMF_LOGKIND_Multi_On_Error  !!!
+20230504 202519.652 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20230504 202519.652 INFO             PET0 Running with ESMF Version   : 8.3.0
+20230504 202519.652 INFO             PET0 ESMF library build date/time: "Jun 14 2022" "12:41:23"
+20230504 202519.652 INFO             PET0 ESMF library build location : /home1/06923/hyu05/work/CWB_DA/esmf-8.3.0
+20230504 202519.652 INFO             PET0 ESMF_COMM                   : intelmpi
+20230504 202519.653 INFO             PET0 ESMF_MOAB                   : enabled
+20230504 202519.653 INFO             PET0 ESMF_LAPACK                 : enabled
+20230504 202519.653 INFO             PET0 ESMF_NETCDF                 : enabled
+20230504 202519.653 INFO             PET0 ESMF_PNETCDF                : disabled
+20230504 202519.653 INFO             PET0 ESMF_PIO                    : enabled
+20230504 202519.653 INFO             PET0 ESMF_YAMLCPP                : enabled
+20230504 202519.654 INFO             PET0 Finalizing ESMF
+20230504 202520.101 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20230504 202520.101 INFO             PET0 !!! THE ESMF_LOG IS SET TO OUTPUT ALL LOG MESSAGES !!!
+20230504 202520.101 INFO             PET0 !!!     THIS MAY CAUSE SLOWDOWN IN PERFORMANCE     !!!
+20230504 202520.101 INFO             PET0 !!! FOR PRODUCTION RUNS, USE:                      !!!
+20230504 202520.101 INFO             PET0 !!!                   ESMF_LOGKIND_Multi_On_Error  !!!
+20230504 202520.101 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20230504 202520.101 INFO             PET0 Running with ESMF Version   : 8.3.0
+20230504 202520.101 INFO             PET0 ESMF library build date/time: "Jun 14 2022" "12:41:23"
+20230504 202520.101 INFO             PET0 ESMF library build location : /home1/06923/hyu05/work/CWB_DA/esmf-8.3.0
+20230504 202520.101 INFO             PET0 ESMF_COMM                   : intelmpi
+20230504 202520.102 INFO             PET0 ESMF_MOAB                   : enabled
+20230504 202520.102 INFO             PET0 ESMF_LAPACK                 : enabled
+20230504 202520.102 INFO             PET0 ESMF_NETCDF                 : enabled
+20230504 202520.102 INFO             PET0 ESMF_PNETCDF                : disabled
+20230504 202520.102 INFO             PET0 ESMF_PIO                    : enabled
+20230504 202520.102 INFO             PET0 ESMF_YAMLCPP                : enabled
+20230504 202520.106 INFO             PET0 Finalizing ESMF
+20230504 202520.571 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20230504 202520.571 INFO             PET0 !!! THE ESMF_LOG IS SET TO OUTPUT ALL LOG MESSAGES !!!
+20230504 202520.571 INFO             PET0 !!!     THIS MAY CAUSE SLOWDOWN IN PERFORMANCE     !!!
+20230504 202520.571 INFO             PET0 !!! FOR PRODUCTION RUNS, USE:                      !!!
+20230504 202520.571 INFO             PET0 !!!                   ESMF_LOGKIND_Multi_On_Error  !!!
+20230504 202520.571 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20230504 202520.571 INFO             PET0 Running with ESMF Version   : 8.3.0
+20230504 202520.571 INFO             PET0 ESMF library build date/time: "Jun 14 2022" "12:41:23"
+20230504 202520.571 INFO             PET0 ESMF library build location : /home1/06923/hyu05/work/CWB_DA/esmf-8.3.0
+20230504 202520.571 INFO             PET0 ESMF_COMM                   : intelmpi
+20230504 202520.572 INFO             PET0 ESMF_MOAB                   : enabled
+20230504 202520.572 INFO             PET0 ESMF_LAPACK                 : enabled
+20230504 202520.572 INFO             PET0 ESMF_NETCDF                 : enabled
+20230504 202520.572 INFO             PET0 ESMF_PNETCDF                : disabled
+20230504 202520.572 INFO             PET0 ESMF_PIO                    : enabled
+20230504 202520.572 INFO             PET0 ESMF_YAMLCPP                : enabled
+20230504 202537.212 INFO             PET0 Finalizing ESMF

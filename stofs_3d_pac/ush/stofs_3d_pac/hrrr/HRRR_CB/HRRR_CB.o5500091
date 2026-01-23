@@ -1,0 +1,18 @@
+/home1/06923/hyu05/work/oper_3D_Pac/sflux/HRRR_CB
+Fri Jun  2 06:50:09 CDT 2023
+hrrr_comb_2023060100.nc exist!
+rm previous test*nc if exist
+GFS itp
+Input #00: /home1/06923/hyu05/work/oper_3D_Pac/sflux/HRRR_CB/test1.nc
+Map/Wgt  : weight_gfs.nc
+HRRR itp
+Input #00: ./HRRR/hrrr_2023060200.nc
+Map/Wgt  : weight_hrrr_us.nc
+HRRR-AK itp
+Input #00: ./HRRR_AK/hrrr_ak_2023060200.nc
+Map/Wgt  : weight_hrrr_ak.nc
+Sink data as One ncfile
+Overwrite field with conus
+Overwrite field with alaska
+Output final ncfile
+rm test*nc

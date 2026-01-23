@@ -1,0 +1,15 @@
+
+The following have been reloaded with a version change:
+  1) netcdf/4.9.0 => netcdf/4.6.2
+
+
+Currently Loaded Modules:
+  1) intel/19.1.1   4) autotools/1.2   7) pmix/3.1.4     10) TACC
+  2) impi/19.0.9    5) python3/3.7.0   8) hwloc/1.11.12  11) nco/4.9.7
+  3) git/2.24.1     6) cmake/3.24.2    9) xalt/2.10.34   12) netcdf/4.6.2
+
+ 
+
+ncks: INFO Reducing user-requested thread number = 2 to maximum thread number omp_get_max_threads() allows = 1
+ncks: INFO Reducing user-requested thread number = 2 to maximum thread number omp_get_max_threads() allows = 1
+ncks: INFO Reducing user-requested thread number = 2 to maximum thread number omp_get_max_threads() allows = 1

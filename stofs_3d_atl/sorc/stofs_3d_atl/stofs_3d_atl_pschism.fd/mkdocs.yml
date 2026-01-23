@@ -1,0 +1,135 @@
+site_name: SCHISM
+use_directory_urls: false
+theme:
+  name: material
+  features:
+    - toc.integrate
+    - toc.follow
+    - content.code.annotate
+  icon:
+    repo: fontawesome/brands/git-alt
+  logo: assets/logo.png
+
+plugins:
+  - search
+  - mike:
+      version_selector: true
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - footnotes
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.details
+  - toc:
+      permalink: true
+
+extra:
+  version:
+    provider: mike
+    default: stable
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+repo_url: https://github.com/schism-dev/schism
+
+# Page tree
+nav:
+  - Home: index.md
+  - Changelog: changelog.md
+  - Getting started:
+    - Overview: schism/overview.md
+    - Getting the source code: getting-started/getting-sourcecode.md
+    - Compilation: getting-started/compilation.md
+    - Test suite:  getting-started/test_suite.md
+    - Typical workflow (a cheat sheet): getting-started/typical-workflow.md
+    - Mesh generation: getting-started/grid-generation.md
+    - Preprocessing: getting-started/pre-processing.md
+    - Preprocessing with pylib:
+      - Overview: getting-started/pre-processing-with-pylib/overview.md 
+      - Installation: getting-started/pre-processing-with-pylib/installation.md
+      - schismCheck (input visualization): getting-started/pre-processing-with-pylib/schismcheck.md
+    - Preprocessing with PySCHISM:
+      - Overview: getting-started/pre-processing-with-pyschism/overview.md
+      - Installation: getting-started/pre-processing-with-pyschism/installation.md
+      - Tides: getting-started/pre-processing-with-pyschism/bctides.md
+      - B.C. from HYCOM: getting-started/pre-processing-with-pyschism/boundary.md
+      - Atmospheric forcing: getting-started/pre-processing-with-pyschism/atmos.md
+      - Souce and Sink: getting-started/pre-processing-with-pyschism/nwm.md
+    - Running the model: getting-started/running-model.md
+    - Visualization: getting-started/visualization.md
+    - Postprocessing: getting-started/post-processing.md
+  - Model formulation:
+    - Physical formulation: schism/physical-formulation.md
+    - Numerical formulation:
+      - Geometry and discretization: schism/geometry-discretization.md
+      - Barotropic solver: schism/barotropic-solver.md
+      - Eulerian-Lagrangian Method: schism/eulerian-lagrangian-method.md
+      - Momentum equation: schism/momentum-equation.md
+      - Vertical velocity: schism/vertical-velocity.md
+      - Turbulence closure: schism/turbulence-closure.md
+      - Transport equation: schism/transport-equation.md
+      - Updating the levels/Inundation: schism/updating-levels.md
+      - Spherical coordinates: schism/spherical-coordinates.md
+  - Input/Output: 
+    - Overview: input-output/overview.md
+    - Horizontal grid (hgrid.gr3): input-output/hgrid.md
+    - Vertical grid (vgrid.in): input-output/vgrid.md
+    - Model parameters (param.nml): input-output/param.md
+    - Boundary conditions (bctides.in): input-output/bctides.md
+    - Bottom friction: input-output/friction.md
+    - Atmospheric flux (/sflux): input-output/sflux.md
+    - Optional inputs: input-output/optional-inputs.md
+    - Outputs: input-output/outputs.md
+  - Mesh generation - advanced topics:
+    - Overview: mesh-generation/overview.md
+    - Meshing for cross-scale regimes: mesh-generation/cross_regime.md
+    - Meshing for compound floods:
+      - Overview: mesh-generation/meshing-for-compound-floods/overview.md
+      - Extract thalwegs from DEM: mesh-generation/meshing-for-compound-floods/extract-thalweg.md
+      - Generate river map: mesh-generation/meshing-for-compound-floods/generate-river-map.md
+      - Special case utilizing NHD (National Hydrography Dataset): mesh-generation/meshing-for-compound-floods/special-case-utilizing-nhd.md
+      - Meshing in SMS: mesh-generation/meshing-for-compound-floods/meshing-in-SMS.md
+  - Modules:
+    - Overview: modules/overview.md
+    - Generic tracer module: modules/generic-tracer.md
+    - AGE: modules/age.md
+    - 2D Sediment model: modules/sed2d.md
+    - 3D Sediment model: modules/sed3d.md
+    - ICM: modules/icm.md
+    - CoSiNe: modules/cosine.md
+    - DVD: modules/dvd.md
+    - Marsh migration: modules/marsh-migration.md
+    - Analysis mode: modules/analysis-mode.md
+    - Hydraulics: modules/hydraulics.md
+    - Particle tracking: modules/particle-tracking.md
+    - WWM (waves): modules/wwm.md
+    - FABM: modules/fabm.md
+    - PaHM: modules/pahm.md
+    - Single-class ice module: modules/single-class-ice.md
+    - Multi-class ice module: modules/multi-class-ice.md
+    - Data assimilation (PDAF): modules/pdaf.md
+  - Code structure: code-contribution.md
+  - Case studies: case-study.md
+  - SCHISM external coupling:
+    - Earth System Modeling Framework: coupling/esmf.md
+    - National Unified Operational Prediction Capability: coupling/nuopc.md
+    - NOAA's CoastalApp: coupling/coastalapp.md
+    - Modular System for Shelves and Coasts: coupling/mossco.md
+    - NCAR's Community Earth System Model: coupling/cesm.md
+  - Frequently Asked Questions: faq.md
+  - Known issues: known_issues.md
+  - Contribute to this online manual: contribute-to-this-online-manual.md

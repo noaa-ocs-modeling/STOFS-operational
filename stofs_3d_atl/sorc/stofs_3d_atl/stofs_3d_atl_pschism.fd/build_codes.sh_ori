@@ -1,0 +1,26 @@
+#!/bin/sh
+
+
+dir_pwd=`pwd`
+
+echo dir_wk=$dir_pwd
+echo
+echo
+
+source ./stofs_3d_atl.build_load_modules 
+module list
+
+export COMP_F=ftn
+export COMP_F_MPI90=ftn
+export COMP_F_MPI=ftn
+export COMP_CC=cc
+
+cd ./src
+
+# clean
+  make clean
+
+# "make all" creates the pschism exe file,  ./src/pschism_WCOSS2_VL
+   make all
+
+

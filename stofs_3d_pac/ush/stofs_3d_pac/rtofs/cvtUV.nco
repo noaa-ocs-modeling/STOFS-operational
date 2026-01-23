@@ -1,0 +1,12 @@
+water_u.change_miss(-30000);
+water_v.change_miss(-30000);
+water_u=float((water_u-0.)/0.001);
+water_u@add_offset=float(0.);
+water_u@scale_factor=float(0.001);
+water_v=float((water_v-0.)/0.001);
+water_v@add_offset=float(0.);
+water_v@scale_factor=float(0.001);
+lon=float(lon);
+lat=float(lat);
+time=float(time);
+depth=float(lev);

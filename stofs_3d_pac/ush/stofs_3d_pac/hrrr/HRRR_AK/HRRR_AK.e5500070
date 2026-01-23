@@ -1,0 +1,679 @@
+
+The following have been reloaded with a version change:
+  1) netcdf/4.9.0 => netcdf/4.6.2
+
+
+Currently Loaded Modules:
+  1) intel/19.1.1   4) autotools/1.2   7) pmix/3.1.4     10) TACC
+  2) impi/19.0.9    5) python3/3.7.0   8) hwloc/1.11.12  11) netcdf/4.6.2
+  3) git/2.24.1     6) cmake/3.24.2    9) xalt/2.10.34   12) nco/4.9.7
+
+ 
+
++ DTOOL=curl
++ '[' curl = wget ']'
++ OPN=o
++ mkdir -p data/2023060200
++ cd data/2023060200
++ FH=00
++ FH2=00
++ fh=00
+++ expr 00 + 48
++ FEND=48
++ '[' 00 -le 48 ']'
++ FH2=00
++ '[' '!' -f pgbf00 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf00.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf00
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 8166k    0 8166k    0     0  9922k      0 --:--:-- --:--:-- --:--:-- 9923k
+++ expr 00 + 1
++ FH=1
++ '[' 1 -lt 10 ']'
++ FH=01
+++ expr 01
++ fh=01
++ '[' 01 -lt 10 ']'
++ fh=001
++ '[' 01 -le 48 ']'
++ FH2=01
++ '[' '!' -f pgbf01 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf01.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf01
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  183k    0  183k    0     0   546k      0 --:--:-- --:--:-- --:--:--  545k100 8409k    0 8409k    0     0  13.9M      0 --:--:-- --:--:-- --:--:-- 13.9M
+++ expr 01 + 1
++ FH=2
++ '[' 2 -lt 10 ']'
++ FH=02
+++ expr 02
++ fh=02
++ '[' 02 -lt 10 ']'
++ fh=002
++ '[' 02 -le 48 ']'
++ FH2=02
++ '[' '!' -f pgbf02 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf02.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf02
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 4083k    0 4083k    0     0  5445k      0 --:--:-- --:--:-- --:--:-- 5444k100 8442k    0 8442k    0     0  7037k      0 --:--:--  0:00:01 --:--:-- 7041k
+++ expr 02 + 1
++ FH=3
++ '[' 3 -lt 10 ']'
++ FH=03
+++ expr 03
++ fh=03
++ '[' 03 -lt 10 ']'
++ fh=003
++ '[' 03 -le 48 ']'
++ FH2=03
++ '[' '!' -f pgbf03 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf03.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf03
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 5802k    0 5802k    0     0  10.4M      0 --:--:-- --:--:-- --:--:-- 10.3M100 8550k    0 8550k    0     0  9723k      0 --:--:-- --:--:-- --:--:-- 9715k
+++ expr 03 + 1
++ FH=4
++ '[' 4 -lt 10 ']'
++ FH=04
+++ expr 04
++ fh=04
++ '[' 04 -lt 10 ']'
++ fh=004
++ '[' 04 -le 48 ']'
++ FH2=04
++ '[' '!' -f pgbf04 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf04.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf04
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 4086k    0 4086k    0     0  6096k      0 --:--:-- --:--:-- --:--:-- 6089k100 8522k    0 8522k    0     0  8017k      0 --:--:--  0:00:01 --:--:-- 8024k
+++ expr 04 + 1
++ FH=5
++ '[' 5 -lt 10 ']'
++ FH=05
+++ expr 05
++ fh=05
++ '[' 05 -lt 10 ']'
++ fh=005
++ '[' 05 -le 48 ']'
++ FH2=05
++ '[' '!' -f pgbf05 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf05.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf05
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 8590k    0 8590k    0     0  20.7M      0 --:--:-- --:--:-- --:--:-- 20.7M
+++ expr 05 + 1
++ FH=6
++ '[' 6 -lt 10 ']'
++ FH=06
+++ expr 06
++ fh=06
++ '[' 06 -lt 10 ']'
++ fh=006
++ '[' 06 -le 48 ']'
++ FH2=06
++ '[' '!' -f pgbf06 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf06.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf06
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 8239k    0 8239k    0     0  14.0M      0 --:--:-- --:--:-- --:--:-- 14.0M
+++ expr 06 + 1
++ FH=7
++ '[' 7 -lt 10 ']'
++ FH=07
+++ expr 07
++ fh=07
++ '[' 07 -lt 10 ']'
++ fh=007
++ '[' 07 -le 48 ']'
++ FH2=07
++ '[' '!' -f pgbf07 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf07.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf07
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 8073k    0 8073k    0     0  16.9M      0 --:--:-- --:--:-- --:--:-- 16.9M
+++ expr 07 + 1
++ FH=8
++ '[' 8 -lt 10 ']'
++ FH=08
+++ expr 08
++ fh=08
++ '[' 08 -lt 10 ']'
++ fh=008
++ '[' 08 -le 48 ']'
++ FH2=08
++ '[' '!' -f pgbf08 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf08.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf08
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 7592k    0 7592k    0     0  7749k      0 --:--:-- --:--:-- --:--:-- 7747k
+++ expr 08 + 1
++ FH=9
++ '[' 9 -lt 10 ']'
++ FH=09
+++ expr 09
++ fh=09
++ '[' 09 -lt 10 ']'
++ fh=009
++ '[' 09 -le 48 ']'
++ FH2=09
++ '[' '!' -f pgbf09 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf09.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf09
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 4568k    0 4568k    0     0  4107k      0 --:--:--  0:00:01 --:--:-- 4107k100 7387k    0 7387k    0     0  6331k      0 --:--:--  0:00:01 --:--:-- 6330k
+++ expr 09 + 1
++ FH=10
++ '[' 10 -lt 10 ']'
+++ expr 10
++ fh=10
++ '[' 10 -lt 10 ']'
++ '[' 10 -le 48 ']'
++ FH2=10
++ '[' '!' -f pgbf10 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf10.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf10
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 7404k    0 7404k    0     0  12.3M      0 --:--:-- --:--:-- --:--:-- 12.3M
+++ expr 10 + 1
++ FH=11
++ '[' 11 -lt 10 ']'
+++ expr 11
++ fh=11
++ '[' 11 -lt 10 ']'
++ '[' 11 -le 48 ']'
++ FH2=11
++ '[' '!' -f pgbf11 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf11.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf11
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 7396k    0 7396k    0     0  10.6M      0 --:--:-- --:--:-- --:--:-- 10.6M
+++ expr 11 + 1
++ FH=12
++ '[' 12 -lt 10 ']'
+++ expr 12
++ fh=12
++ '[' 12 -lt 10 ']'
++ '[' 12 -le 48 ']'
++ FH2=12
++ '[' '!' -f pgbf12 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf12.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf12
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 7478k    0 7478k    0     0  18.1M      0 --:--:-- --:--:-- --:--:-- 18.2M
+++ expr 12 + 1
++ FH=13
++ '[' 13 -lt 10 ']'
+++ expr 13
++ fh=13
++ '[' 13 -lt 10 ']'
++ '[' 13 -le 48 ']'
++ FH2=13
++ '[' '!' -f pgbf13 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf13.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf13
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 7671k    0 7671k    0     0  16.7M      0 --:--:-- --:--:-- --:--:-- 16.7M
+++ expr 13 + 1
++ FH=14
++ '[' 14 -lt 10 ']'
+++ expr 14
++ fh=14
++ '[' 14 -lt 10 ']'
++ '[' 14 -le 48 ']'
++ FH2=14
++ '[' '!' -f pgbf14 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf14.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf14
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 3627k    0 3627k    0     0  4589k      0 --:--:-- --:--:-- --:--:-- 4585k100 7924k    0 7924k    0     0  7063k      0 --:--:--  0:00:01 --:--:-- 7069k
+++ expr 14 + 1
++ FH=15
++ '[' 15 -lt 10 ']'
+++ expr 15
++ fh=15
++ '[' 15 -lt 10 ']'
++ '[' 15 -le 48 ']'
++ FH2=15
++ '[' '!' -f pgbf15 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf15.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf15
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 8173k    0 8173k    0     0  8809k      0 --:--:-- --:--:-- --:--:-- 8807k
+++ expr 15 + 1
++ FH=16
++ '[' 16 -lt 10 ']'
+++ expr 16
++ fh=16
++ '[' 16 -lt 10 ']'
++ '[' 16 -le 48 ']'
++ FH2=16
++ '[' '!' -f pgbf16 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf16.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf16
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 7741k    0 7741k    0     0  10.3M      0 --:--:-- --:--:-- --:--:-- 10.3M100 8298k    0 8298k    0     0  10.2M      0 --:--:-- --:--:-- --:--:-- 10.2M
+++ expr 16 + 1
++ FH=17
++ '[' 17 -lt 10 ']'
+++ expr 17
++ fh=17
++ '[' 17 -lt 10 ']'
++ '[' 17 -le 48 ']'
++ FH2=17
++ '[' '!' -f pgbf17 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf17.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf17
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 8568k    0 8568k    0     0  9733k      0 --:--:-- --:--:-- --:--:-- 9736k
+++ expr 17 + 1
++ FH=18
++ '[' 18 -lt 10 ']'
+++ expr 18
++ fh=18
++ '[' 18 -lt 10 ']'
++ '[' 18 -le 48 ']'
++ FH2=18
++ '[' '!' -f pgbf18 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf18.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf18
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 8686k    0 8686k    0     0  15.8M      0 --:--:-- --:--:-- --:--:-- 15.8M
+++ expr 18 + 1
++ FH=19
++ '[' 19 -lt 10 ']'
+++ expr 19
++ fh=19
++ '[' 19 -lt 10 ']'
++ '[' 19 -le 48 ']'
++ FH2=19
++ '[' '!' -f pgbf19 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf19.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf19
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 8744k    0 8744k    0     0  19.4M      0 --:--:-- --:--:-- --:--:-- 19.4M
+++ expr 19 + 1
++ FH=20
++ '[' 20 -lt 10 ']'
+++ expr 20
++ fh=20
++ '[' 20 -lt 10 ']'
++ '[' 20 -le 48 ']'
++ FH2=20
++ '[' '!' -f pgbf20 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf20.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf20
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 8781k    0 8781k    0     0  16.2M      0 --:--:-- --:--:-- --:--:-- 16.2M
+++ expr 20 + 1
++ FH=21
++ '[' 21 -lt 10 ']'
+++ expr 21
++ fh=21
++ '[' 21 -lt 10 ']'
++ '[' 21 -le 48 ']'
++ FH2=21
++ '[' '!' -f pgbf21 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf21.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf21
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 8812k    0 8812k    0     0  17.1M      0 --:--:-- --:--:-- --:--:-- 17.2M
+++ expr 21 + 1
++ FH=22
++ '[' 22 -lt 10 ']'
+++ expr 22
++ fh=22
++ '[' 22 -lt 10 ']'
++ '[' 22 -le 48 ']'
++ FH2=22
++ '[' '!' -f pgbf22 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf22.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf22
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 8850k    0 8850k    0     0  20.9M      0 --:--:-- --:--:-- --:--:-- 20.9M
+++ expr 22 + 1
++ FH=23
++ '[' 23 -lt 10 ']'
+++ expr 23
++ fh=23
++ '[' 23 -lt 10 ']'
++ '[' 23 -le 48 ']'
++ FH2=23
++ '[' '!' -f pgbf23 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf23.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf23
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 8864k    0 8864k    0     0  20.3M      0 --:--:-- --:--:-- --:--:-- 20.4M
+++ expr 23 + 1
++ FH=24
++ '[' 24 -lt 10 ']'
+++ expr 24
++ fh=24
++ '[' 24 -lt 10 ']'
++ '[' 24 -le 48 ']'
++ FH2=24
++ '[' '!' -f pgbf24 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf24.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf24
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 8863k    0 8863k    0     0  19.3M      0 --:--:-- --:--:-- --:--:-- 19.3M
+++ expr 24 + 1
++ FH=25
++ '[' 25 -lt 10 ']'
+++ expr 25
++ fh=25
++ '[' 25 -lt 10 ']'
++ '[' 25 -le 48 ']'
++ FH2=25
++ '[' '!' -f pgbf25 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf25.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf25
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 8744k    0 8744k    0     0  15.4M      0 --:--:-- --:--:-- --:--:-- 15.4M
+++ expr 25 + 1
++ FH=26
++ '[' 26 -lt 10 ']'
+++ expr 26
++ fh=26
++ '[' 26 -lt 10 ']'
++ '[' 26 -le 48 ']'
++ FH2=26
++ '[' '!' -f pgbf26 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf26.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf26
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 8723k    0 8723k    0     0  14.4M      0 --:--:-- --:--:-- --:--:-- 14.4M
+++ expr 26 + 1
++ FH=27
++ '[' 27 -lt 10 ']'
+++ expr 27
++ fh=27
++ '[' 27 -lt 10 ']'
++ '[' 27 -le 48 ']'
++ FH2=27
++ '[' '!' -f pgbf27 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf27.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf27
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 7800k    0 7800k    0     0  14.4M      0 --:--:-- --:--:-- --:--:-- 14.4M100 8806k    0 8806k    0     0  15.6M      0 --:--:-- --:--:-- --:--:-- 15.6M
+++ expr 27 + 1
++ FH=28
++ '[' 28 -lt 10 ']'
+++ expr 28
++ fh=28
++ '[' 28 -lt 10 ']'
++ '[' 28 -le 48 ']'
++ FH2=28
++ '[' '!' -f pgbf28 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf28.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf28
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 8744k    0 8744k    0     0  12.6M      0 --:--:-- --:--:-- --:--:-- 12.6M
+++ expr 28 + 1
++ FH=29
++ '[' 29 -lt 10 ']'
+++ expr 29
++ fh=29
++ '[' 29 -lt 10 ']'
++ '[' 29 -le 48 ']'
++ FH2=29
++ '[' '!' -f pgbf29 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf29.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf29
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 8617k    0 8617k    0     0  13.4M      0 --:--:-- --:--:-- --:--:-- 13.4M
+++ expr 29 + 1
++ FH=30
++ '[' 30 -lt 10 ']'
+++ expr 30
++ fh=30
++ '[' 30 -lt 10 ']'
++ '[' 30 -le 48 ']'
++ FH2=30
++ '[' '!' -f pgbf30 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf30.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf30
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 8386k    0 8386k    0     0  14.4M      0 --:--:-- --:--:-- --:--:-- 14.4M
+++ expr 30 + 1
++ FH=31
++ '[' 31 -lt 10 ']'
+++ expr 31
++ fh=31
++ '[' 31 -lt 10 ']'
++ '[' 31 -le 48 ']'
++ FH2=31
++ '[' '!' -f pgbf31 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf31.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf31
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 8188k    0 8188k    0     0  19.4M      0 --:--:-- --:--:-- --:--:-- 19.4M
+++ expr 31 + 1
++ FH=32
++ '[' 32 -lt 10 ']'
+++ expr 32
++ fh=32
++ '[' 32 -lt 10 ']'
++ '[' 32 -le 48 ']'
++ FH2=32
++ '[' '!' -f pgbf32 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf32.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf32
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 7834k    0 7834k    0     0  19.3M      0 --:--:-- --:--:-- --:--:-- 19.3M
+++ expr 32 + 1
++ FH=33
++ '[' 33 -lt 10 ']'
+++ expr 33
++ fh=33
++ '[' 33 -lt 10 ']'
++ '[' 33 -le 48 ']'
++ FH2=33
++ '[' '!' -f pgbf33 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf33.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf33
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 24576    0 24576    0     0  98366      0 --:--:-- --:--:-- --:--:-- 98304100 7610k    0 7610k    0     0  15.6M      0 --:--:-- --:--:-- --:--:-- 15.6M
+++ expr 33 + 1
++ FH=34
++ '[' 34 -lt 10 ']'
+++ expr 34
++ fh=34
++ '[' 34 -lt 10 ']'
++ '[' 34 -le 48 ']'
++ FH2=34
++ '[' '!' -f pgbf34 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf34.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf34
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 7472k    0 7472k    0     0  18.8M      0 --:--:-- --:--:-- --:--:-- 18.8M
+++ expr 34 + 1
++ FH=35
++ '[' 35 -lt 10 ']'
+++ expr 35
++ fh=35
++ '[' 35 -lt 10 ']'
++ '[' 35 -le 48 ']'
++ FH2=35
++ '[' '!' -f pgbf35 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf35.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf35
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 7308k    0 7308k    0     0   9.7M      0 --:--:-- --:--:-- --:--:--  9.7M
+++ expr 35 + 1
++ FH=36
++ '[' 36 -lt 10 ']'
+++ expr 36
++ fh=36
++ '[' 36 -lt 10 ']'
++ '[' 36 -le 48 ']'
++ FH2=36
++ '[' '!' -f pgbf36 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf36.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf36
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 7376k    0 7376k    0     0  20.6M      0 --:--:-- --:--:-- --:--:-- 20.7M
+++ expr 36 + 1
++ FH=37
++ '[' 37 -lt 10 ']'
+++ expr 37
++ fh=37
++ '[' 37 -lt 10 ']'
++ '[' 37 -le 48 ']'
++ FH2=37
++ '[' '!' -f pgbf37 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf37.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf37
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 7565k    0 7565k    0     0  14.9M      0 --:--:-- --:--:-- --:--:-- 14.9M
+++ expr 37 + 1
++ FH=38
++ '[' 38 -lt 10 ']'
+++ expr 38
++ fh=38
++ '[' 38 -lt 10 ']'
++ '[' 38 -le 48 ']'
++ FH2=38
++ '[' '!' -f pgbf38 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf38.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf38
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 7782k    0 7782k    0     0  14.5M      0 --:--:-- --:--:-- --:--:-- 14.5M
+++ expr 38 + 1
++ FH=39
++ '[' 39 -lt 10 ']'
+++ expr 39
++ fh=39
++ '[' 39 -lt 10 ']'
++ '[' 39 -le 48 ']'
++ FH2=39
++ '[' '!' -f pgbf39 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf39.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf39
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 8042k    0 8042k    0     0  12.7M      0 --:--:-- --:--:-- --:--:-- 12.7M
+++ expr 39 + 1
++ FH=40
++ '[' 40 -lt 10 ']'
+++ expr 40
++ fh=40
++ '[' 40 -lt 10 ']'
++ '[' 40 -le 48 ']'
++ FH2=40
++ '[' '!' -f pgbf40 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf40.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf40
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 8328k    0 8328k    0     0  19.7M      0 --:--:-- --:--:-- --:--:-- 19.7M
+++ expr 40 + 1
++ FH=41
++ '[' 41 -lt 10 ']'
+++ expr 41
++ fh=41
++ '[' 41 -lt 10 ']'
++ '[' 41 -le 48 ']'
++ FH2=41
++ '[' '!' -f pgbf41 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf41.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf41
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 8614k    0 8614k    0     0  12.8M      0 --:--:-- --:--:-- --:--:-- 12.8M
+++ expr 41 + 1
++ FH=42
++ '[' 42 -lt 10 ']'
+++ expr 42
++ fh=42
++ '[' 42 -lt 10 ']'
++ '[' 42 -le 48 ']'
++ FH2=42
++ '[' '!' -f pgbf42 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf42.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf42
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  798k    0  798k    0     0  1470k      0 --:--:-- --:--:-- --:--:-- 1468k100 8714k    0 8714k    0     0  8648k      0 --:--:--  0:00:01 --:--:-- 8654k
+++ expr 42 + 1
++ FH=43
++ '[' 43 -lt 10 ']'
+++ expr 43
++ fh=43
++ '[' 43 -lt 10 ']'
++ '[' 43 -le 48 ']'
++ FH2=43
++ '[' '!' -f pgbf43 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf43.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf43
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 8953k    0 8953k    0     0  19.8M      0 --:--:-- --:--:-- --:--:-- 19.8M
+++ expr 43 + 1
++ FH=44
++ '[' 44 -lt 10 ']'
+++ expr 44
++ fh=44
++ '[' 44 -lt 10 ']'
++ '[' 44 -le 48 ']'
++ FH2=44
++ '[' '!' -f pgbf44 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf44.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf44
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 8694k    0 8694k    0     0  21.4M      0 --:--:-- --:--:-- --:--:-- 21.3M
+++ expr 44 + 1
++ FH=45
++ '[' 45 -lt 10 ']'
+++ expr 45
++ fh=45
++ '[' 45 -lt 10 ']'
++ '[' 45 -le 48 ']'
++ FH2=45
++ '[' '!' -f pgbf45 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf45.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf45
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 8882k    0 8882k    0     0  16.6M      0 --:--:-- --:--:-- --:--:-- 16.7M
+++ expr 45 + 1
++ FH=46
++ '[' 46 -lt 10 ']'
+++ expr 46
++ fh=46
++ '[' 46 -lt 10 ']'
++ '[' 46 -le 48 ']'
++ FH2=46
++ '[' '!' -f pgbf46 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf46.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf46
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 8774k    0 8774k    0     0  16.1M      0 --:--:-- --:--:-- --:--:-- 16.1M
+++ expr 46 + 1
++ FH=47
++ '[' 47 -lt 10 ']'
+++ expr 47
++ fh=47
++ '[' 47 -lt 10 ']'
++ '[' 47 -le 48 ']'
++ FH2=47
++ '[' '!' -f pgbf47 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf47.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf47
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 9093k    0 9093k    0     0  20.6M      0 --:--:-- --:--:-- --:--:-- 20.6M
+++ expr 47 + 1
++ FH=48
++ '[' 48 -lt 10 ']'
+++ expr 48
++ fh=48
++ '[' 48 -lt 10 ']'
++ '[' 48 -le 48 ']'
++ FH2=48
++ '[' '!' -f pgbf48 ']'
++ curl 'https://nomads.ncep.noaa.gov/cgi-bin/filter_hrrrak_2d.pl?dir=%2Fhrrr.20230602%2Falaska&file=hrrr.t00z.wrfsfcf48.ak.grib2&var_DLWRF=on&var_DSWRF=on&var_MSLMA=on&var_PRATE=on&var_SPFH=on&var_TMP=on&var_UGRD=on&var_VGRD=on&lev_2_m_above_ground=on&lev_10_m_above_ground=on&lev_surface=on&lev_mean_sea_level=on' -o pgbf48
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 8596k    0 8596k    0     0  7124k      0 --:--:--  0:00:01 --:--:-- 7122k100 8963k    0 8963k    0     0  6408k      0 --:--:--  0:00:01 --:--:-- 6407k
+++ expr 48 + 1
++ FH=49
++ '[' 49 -lt 10 ']'
+++ expr 49
++ fh=49
++ '[' 49 -lt 10 ']'
++ '[' 49 -le 48 ']'
++ cd -

@@ -1,0 +1,60 @@
+#!/bin/bash
+
+export PATH=/home1/apps/intel19/nco/4.9.7/bin:$PATH
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/opt/intel/compilers_and_libraries_2020.1.217/linux/compiler/lib/intel64:/lib64/
+
+which ncks
+
+cd /home1/06923/hyu05/work/oper_3D_Pac/rtofs/$1
+
+start0=$(/bin/date --date='1 days ago' +%Y%m%d)
+start=$(/bin/date --date='0 days ago' +%Y%m%d)
+end=$(/bin/date --date='-6 days ago' +%Y%m%d)
+
+
+ns=8
+n=1
+idx_x1=$2 
+idx_x2=$3
+idx_y1=$4
+idx_y2=$5
+
+while [[ $start -le $end ]]
+do
+
+#  if [ -f ./outputs/SSH_${start}.nc ]
+#  then
+#     echo "RTOFS ssh exist!"
+#  else
+      echo "Get data:", $start, $ns, $n
+      ncks -O -d time,$ns -d lon,$idx_x1,$idx_x2 -d lat,$idx_y1,$idx_y2  http://nomads.ncep.noaa.gov:80/dods/rtofs/rtofs_global${start0}/rtofs_glo_2ds_forecast_3hrly_diag ssh_${start}.nc
+      echo "          ssh Done! "
+#  fi
+ 
+#  if [ -f ./outputs/ST_${start}.nc ]
+#  then
+#     echo "RTOFS ST exist!"
+#  else
+      echo "Get data:", $start, $ns, $n
+      ncks -O -d time,$n -d lon,$idx_x1,$idx_x2 -d lat,$idx_y1,$idx_y2  http://nomads.ncep.noaa.gov:80/dods/rtofs/rtofs_global${start0}/rtofs_glo_3dz_forecast_daily_salt s_${start}.nc
+      echo "          salt Done! "
+      ncks -O -d time,$n -d lon,$idx_x1,$idx_x2 -d lat,$idx_y1,$idx_y2  http://nomads.ncep.noaa.gov:80/dods/rtofs/rtofs_global${start0}/rtofs_glo_3dz_forecast_daily_temp t_${start}.nc
+      echo "          temp Done! "
+#  fi
+
+#  if [ -f ./outputs/UV_${start}.nc ]
+#  then
+#     echo "RTOFS UV exist!"
+#  else
+      echo "Get data:", $start, $ns, $n
+      ncks -O -d time,$n -d lon,$idx_x1,$idx_x2 -d lat,$idx_y1,$idx_y2  http://nomads.ncep.noaa.gov:80/dods/rtofs/rtofs_global${start0}/rtofs_glo_3dz_forecast_daily_uvel u_${start}.nc
+      echo "          water_u Done! "
+      ncks -O -d time,$n -d lon,$idx_x1,$idx_x2 -d lat,$idx_y1,$idx_y2  http://nomads.ncep.noaa.gov:80/dods/rtofs/rtofs_global${start0}/rtofs_glo_3dz_forecast_daily_vvel v_${start}.nc
+      echo "          water_v Done! "
+#  fi
+#  forward date
+   start=$(date -d"$start + 1 day" +"%Y%m%d")
+   let ns=ns+8
+   let n=n+1
+
+done

@@ -1,0 +1,212 @@
+Sat Jun 17 12:28:17 EDT 2023
+SSH,20230615
+ST,20230615
+UV,20230615
+SSH,20230616
+ST,20230616
+UV,20230616
+SSH,20230617
+ST,20230617
+UV,20230617
+SSH,20230618
+ST,20230618
+UV,20230618
+SSH,20230615
+ST,20230615
+UV,20230615
+SSH,20230616
+ST,20230616
+UV,20230616
+SSH,20230617
+ST,20230617
+UV,20230617
+SSH,20230618
+ST,20230618
+UV,20230618
+SSH,20230615
+ST,20230615
+SSH,20230615
+ST,20230615
+SSH,20230615
+ST,20230615
+UV,20230615
+UV,20230615
+SSH,20230615
+ST,20230615
+SSH,20230616
+UV,20230615
+SSH,20230616
+ST,20230616
+ST,20230616
+UV,20230615
+UV,20230616
+UV,20230616
+SSH,20230616
+ST,20230616
+SSH,20230617
+ST,20230617
+SSH,20230616
+SSH,20230617
+ST,20230616
+ST,20230617
+UV,20230616
+UV,20230617
+UV,20230617
+UV,20230616
+SSH,20230618
+SSH,20230617
+ST,20230618
+ST,20230617
+SSH,20230618
+ST,20230618
+UV,20230618
+SSH,20230617
+UV,20230617
+ST,20230617
+UV,20230618
+SSH,20230618
+UV,20230617
+ST,20230618
+UV,20230618
+SSH,20230618
+ST,20230618
+UV,20230618
+       27023  nodes included in _nu.nc
+       27023  nodes included in _nu.nc
+       27023  nodes included in _nu.nc
+       27023  nodes included in _nu.nc
+       27023  nodes included in _nu.nc
+       27023  nodes included in _nu.nc
+ Done computing geometry...
+ Done reading variable ID
+      327680           2      393216      458752 TS_1.nc
+           4           3           2           1
+ ixlen,iylen,ilen,ntime=           76          74          33           4
+ xlon, ylat is            2  dimension.
+ Time out (days)=  0.0000000E+00           1
+ done outputting test outputs for nc
+ Time out (days)=   1.000000               2
+ Time out (days)=   2.000000               3
+ Time out (days)=   3.000000               4
+ done reading nc for file            1
+ Done computing geometry...
+ Done reading variable ID
+      327680           2      393216      458752 TS_1.nc
+           4           3           2           1
+ ixlen,iylen,ilen,ntime=           97         344          33           4
+ xlon, ylat is            2  dimension.
+ Time out (days)=  0.0000000E+00           1
+ done outputting test outputs for nc
+ Done computing geometry...
+ Done reading variable ID
+      327680           2      393216      458752 TS_1.nc
+           4           3           2           1
+ ixlen,iylen,ilen,ntime=          253         333          33           4
+ xlon, ylat is            2  dimension.
+ Time out (days)=  0.0000000E+00           1
+ Done computing geometry...
+ Done reading variable ID
+      327680           2      393216      458752 TS_1.nc
+           4           3           2           1
+ ixlen,iylen,ilen,ntime=          588         116          33           4
+ xlon, ylat is            2  dimension.
+ Time out (days)=  0.0000000E+00           1
+ done outputting test outputs for nc
+ Done computing geometry...
+ Done reading variable ID
+      327680           2      393216      458752 TS_1.nc
+           4           3           2           1
+ ixlen,iylen,ilen,ntime=          704         136          33           4
+ xlon, ylat is            2  dimension.
+ Time out (days)=  0.0000000E+00           1
+ Done computing geometry...
+ done outputting test outputs for nc
+ Done reading variable ID
+      327680           2      393216      458752 TS_1.nc
+           4           3           2           1
+ ixlen,iylen,ilen,ntime=          573         139          33           4
+ xlon, ylat is            2  dimension.
+ Time out (days)=  0.0000000E+00           1
+ Time out (days)=   1.000000               2
+ done outputting test outputs for nc
+ done outputting test outputs for nc
+ Time out (days)=   2.000000               3
+ Time out (days)=   3.000000               4
+ done reading nc for file            1
+ Time out (days)=   1.000000               2
+ Time out (days)=   2.000000               3
+ Time out (days)=   3.000000               4
+ done reading nc for file            1
+ Time out (days)=   1.000000               2
+ Time out (days)=   1.000000               2
+ Time out (days)=   2.000000               3
+ Time out (days)=   2.000000               3
+ Time out (days)=   3.000000               4
+ Time out (days)=   3.000000               4
+ done reading nc for file            1
+ doing TS_1.nc
+ ixlen,iylen,ilen,ntime=          253         333          33           4
+ xlon, ylat is            2  dimension.
+ done reading nc for file            1
+ Time out (days)=   1.000000               2
+ doing TS_1.nc
+ ixlen,iylen,ilen,ntime=          588         116          33           4
+ xlon, ylat is            2  dimension.
+ doing TS_1.nc
+ ixlen,iylen,ilen,ntime=          573         139          33           4
+ xlon, ylat is            2  dimension.
+ doing TS_1.nc
+ ixlen,iylen,ilen,ntime=          704         136          33           4
+ xlon, ylat is            2  dimension.
+ doing TS_1.nc
+ ixlen,iylen,ilen,ntime=           97         344          33           4
+ xlon, ylat is            2  dimension.
+ done outputting test outputs for nc
+ Time out (days)=   2.000000               3
+ done outputting test outputs for nc
+ done outputting test outputs for nc
+ done outputting test outputs for nc
+ Time out (days)=   3.000000               4
+ done outputting test outputs for nc
+ done reading nc for file            1
+ doing TS_1.nc
+ ixlen,iylen,ilen,ntime=           76          74          33           4
+ xlon, ylat is            2  dimension.
+ done outputting test outputs for nc
+ outputting _nu.nc at day   0.0000000E+00
+ outputting _nu.nc at day   0.0000000E+00
+ outputting _nu.nc at day   0.0000000E+00
+ outputting _nu.nc at day   0.0000000E+00
+ outputting _nu.nc at day   0.0000000E+00
+ outputting _nu.nc at day   0.0000000E+00
+ outputting _nu.nc at day    1.000000    
+ outputting _nu.nc at day    2.000000    
+ outputting _nu.nc at day    3.000000    
+ done reading nc for file            1
+ Finished
+ outputting _nu.nc at day    1.000000    
+ outputting _nu.nc at day    2.000000    
+ outputting _nu.nc at day    3.000000    
+ done reading nc for file            1
+ Finished
+ outputting _nu.nc at day    1.000000    
+ outputting _nu.nc at day    2.000000    
+ outputting _nu.nc at day    3.000000    
+ done reading nc for file            1
+ Finished
+ outputting _nu.nc at day    1.000000    
+ outputting _nu.nc at day    2.000000    
+ outputting _nu.nc at day    1.000000    
+ outputting _nu.nc at day    3.000000    
+ done reading nc for file            1
+ Finished
+ outputting _nu.nc at day    2.000000    
+ outputting _nu.nc at day    3.000000    
+ done reading nc for file            1
+ Finished
+ outputting _nu.nc at day    1.000000    
+ outputting _nu.nc at day    2.000000    
+ outputting _nu.nc at day    3.000000    
+ done reading nc for file            1
+ Finished
+Sat Jun 17 12:38:26 EDT 2023
