@@ -6,22 +6,22 @@
 __pycache__/
 *.pyc
 
-# Local dev directories (kept locally, not in git)
-ecf/
-ecf_mjisan/
-exec/
-gempak/
-jobs/
-jobs_mjisan/
-lib/
-parm/
-scripts/
-scripts_mjisan/
-sorc/
-ush/
-ush_mjisan/
-v1.1.1/
-versions/
+# Local dev directories at root level (kept locally, not in git)
+/ecf/
+/ecf_mjisan/
+/exec/
+/gempak/
+/jobs/
+/jobs_mjisan/
+/lib/
+/parm/
+/scripts/
+/scripts_mjisan/
+/sorc/
+/ush/
+/ush_mjisan/
+/v1.1.1/
+/versions/
 
 # Large data files in stofs_3d_pac
 stofs_3d_pac/sorc/stofs_3d_pac/stofs_3d_pac_gen_partition_prop.fd/vgrid.in
